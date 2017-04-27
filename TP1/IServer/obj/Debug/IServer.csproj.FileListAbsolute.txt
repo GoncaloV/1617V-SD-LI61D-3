@@ -1,0 +1,6 @@
+C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\IServer\obj\Debug\IServer.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\IServer\bin\Debug\IServer.dll.config
+C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\IServer\bin\Debug\IServer.dll
+C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\IServer\bin\Debug\IServer.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\IServer\obj\Debug\IServer.dll
+C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\IServer\obj\Debug\IServer.pdb

@@ -1,0 +1,6 @@
+C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\RingAndKeyManager\bin\Debug\RingAndKeyManager.exe.config
+C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\RingAndKeyManager\bin\Debug\RingAndKeyManager.exe
+C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\RingAndKeyManager\bin\Debug\RingAndKeyManager.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\RingAndKeyManager\obj\Debug\RingAndKeyManager.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\RingAndKeyManager\obj\Debug\RingAndKeyManager.exe
+C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\RingAndKeyManager\obj\Debug\RingAndKeyManager.pdb
