@@ -4,3 +4,6 @@ C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\RingAndKeyManager\bin\Debug\R
 C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\RingAndKeyManager\obj\Debug\RingAndKeyManager.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\RingAndKeyManager\obj\Debug\RingAndKeyManager.exe
 C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\RingAndKeyManager\obj\Debug\RingAndKeyManager.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\RingAndKeyManager\obj\Debug\RingAndKeyManager.csprojResolveAssemblyReference.cache
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\RingAndKeyManager\obj\Debug\RingAndKeyManager.exe
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\RingAndKeyManager\obj\Debug\RingAndKeyManager.pdb

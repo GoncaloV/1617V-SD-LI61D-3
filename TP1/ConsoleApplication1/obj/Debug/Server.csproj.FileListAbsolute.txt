@@ -6,3 +6,11 @@ C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\ConsoleApplication1\bin\Debug
 C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\ConsoleApplication1\bin\Debug\IServer.pdb
 C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\ConsoleApplication1\obj\Debug\Server.exe
 C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\ConsoleApplication1\obj\Debug\Server.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\ConsoleApplication1\bin\Debug\Server.exe.config
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\ConsoleApplication1\bin\Debug\Server.exe
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\ConsoleApplication1\bin\Debug\Server.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\ConsoleApplication1\bin\Debug\IServer.dll
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\ConsoleApplication1\bin\Debug\IServer.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\ConsoleApplication1\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\ConsoleApplication1\obj\Debug\Server.exe
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\ConsoleApplication1\obj\Debug\Server.pdb

@@ -7,3 +7,12 @@ C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\TP1\obj\Debug\TP1.Properties.
 C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\TP1\obj\Debug\Client.csproj.GenerateResource.Cache
 C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\TP1\obj\Debug\TP1.exe
 C:\Users\user\Documents\2017V\SD\Projectos\TP1\TP1\TP1\obj\Debug\TP1.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\TP1\bin\Debug\TP1.exe.config
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\TP1.exe
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\TP1.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\TP1\bin\Debug\TP1.exe
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\TP1\bin\Debug\TP1.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\TP1.Form1.resources
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\TP1.Properties.Resources.resources
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\Client.csproj.GenerateResource.Cache
