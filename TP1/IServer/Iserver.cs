@@ -21,7 +21,8 @@ namespace Interface
 
     public interface IManagerClientSide
     {
-        IServer getRing();
+        //Return the URL of the server.Returning an object will be difficult as fuck
+        String getRing();
     }
 
     public interface IClientInterface
