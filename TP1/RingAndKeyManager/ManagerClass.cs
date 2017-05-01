@@ -8,21 +8,15 @@ using System.Threading.Tasks;
 
 namespace RingAndKeyManager
 {
-    public class Manager : MarshalByRefObject, IManager
+    public class ManagerClass : MarshalByRefObject, IManagerServerSide, IManagerClientSide
     {
+        LinkedList<IServer> servers;
+        LinkedList<String> keys;
 
-        List<IServer> servers;
-        List<String> keys;
+        public ManagerClass()
+        {
+            Console.WriteLine("ManagerClass construtor");
 
-        public Manager()
-        {
-            servers = new List<IServer>();
-            keys = new List<string>();
-        }
-        
-        public IServer getRing()
-        {
-            
         }
 
         public bool checkIfKeyExists(string key)
@@ -30,12 +24,7 @@ namespace RingAndKeyManager
             throw new NotImplementedException();
         }
 
-        public SerializableAttribute searchServersForObject(string key)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool ReplicateInformationBetweenServers(int id, string Key, SerializableAttribute val)
+        public IServer getRing()
         {
             throw new NotImplementedException();
         }
@@ -45,9 +34,14 @@ namespace RingAndKeyManager
             throw new NotImplementedException();
         }
 
-        static void Main(string[] args)
+        public bool ReplicateInformationBetweenServers(int id, string Key, SerializableAttribute val)
         {
+            throw new NotImplementedException();
+        }
 
+        public SerializableAttribute searchServersForObject(string key)
+        {
+            throw new NotImplementedException();
         }
     }
 }
