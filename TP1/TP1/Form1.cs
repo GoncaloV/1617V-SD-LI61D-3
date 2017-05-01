@@ -1,20 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Interface;
+using ClientClass;
 
 namespace TP1
 {
     public partial class Form1 : Form
     {
+        private readonly IClientInterface clientController;
+
         public Form1()
         {
             InitializeComponent();
+            clientController = new ClientClassImpl();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clientController.associateWithServer();
         }
     }
 }

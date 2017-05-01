@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,6 +15,10 @@ namespace TP1
         [STAThread]
         static void Main()
         {
+
+            string configfile = "TP1.exe.config";
+            RemotingConfiguration.Configure(configfile, false);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

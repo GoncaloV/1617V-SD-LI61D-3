@@ -1,0 +1,11 @@
+C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\Ring.exe.config
+C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\Ring.exe
+C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\Ring.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\Ring\obj\Debug\Ring.csprojResolveAssemblyReference.cache
+C:\Users\André Carvalho\Desktop\SD\TP1\Ring\obj\Debug\Ring.exe
+C:\Users\André Carvalho\Desktop\SD\TP1\Ring\obj\Debug\Ring.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\RingAndKeyManager.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\IServer.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\RingAndKeyManager.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\IServer.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\IServer.dll.config

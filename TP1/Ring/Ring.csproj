@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RingAndKeyManager\ManagerClass.csproj">
+      <Project>{b94600b1-d43f-40dc-9514-ec870adb9682}</Project>
+      <Name>ManagerClass</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,21 +1,35 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "TP1\Client.csproj", "{5ECEE8A6-D6FB-4D3B-A01D-BD2E8E39A100}"
 	ProjectSection(ProjectDependencies) = postProject
 		{281B1F4A-7EC7-44EB-B13C-D1220C0B87A3} = {281B1F4A-7EC7-44EB-B13C-D1220C0B87A3}
+		{33ED5B6E-85F7-4C80-86FD-CF7E0E622E21} = {33ED5B6E-85F7-4C80-86FD-CF7E0E622E21}
+		{B94600B1-D43F-40DC-9514-EC870ADB9682} = {B94600B1-D43F-40DC-9514-EC870ADB9682}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "ConsoleApplication1\Server.csproj", "{33ED5B6E-85F7-4C80-86FD-CF7E0E622E21}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientClass", "ConsoleApplication1\ClientClass.csproj", "{33ED5B6E-85F7-4C80-86FD-CF7E0E622E21}"
 	ProjectSection(ProjectDependencies) = postProject
 		{281B1F4A-7EC7-44EB-B13C-D1220C0B87A3} = {281B1F4A-7EC7-44EB-B13C-D1220C0B87A3}
+		{B94600B1-D43F-40DC-9514-EC870ADB9682} = {B94600B1-D43F-40DC-9514-EC870ADB9682}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IServer", "IServer\IServer.csproj", "{281B1F4A-7EC7-44EB-B13C-D1220C0B87A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "IServer\Interfaces.csproj", "{281B1F4A-7EC7-44EB-B13C-D1220C0B87A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RingAndKeyManager", "RingAndKeyManager\RingAndKeyManager.csproj", "{B94600B1-D43F-40DC-9514-EC870ADB9682}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagerClass", "RingAndKeyManager\ManagerClass.csproj", "{B94600B1-D43F-40DC-9514-EC870ADB9682}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ring", "Ring\Ring.csproj", "{095FF923-B4E0-487C-8155-829C9CA020A2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B94600B1-D43F-40DC-9514-EC870ADB9682} = {B94600B1-D43F-40DC-9514-EC870ADB9682}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerClass", "ServerClass\ServerClass.csproj", "{761786BA-E7BA-4C7E-A6A5-366F9B31C963}"
+	ProjectSection(ProjectDependencies) = postProject
+		{281B1F4A-7EC7-44EB-B13C-D1220C0B87A3} = {281B1F4A-7EC7-44EB-B13C-D1220C0B87A3}
+		{B94600B1-D43F-40DC-9514-EC870ADB9682} = {B94600B1-D43F-40DC-9514-EC870ADB9682}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +53,14 @@ Global
 		{B94600B1-D43F-40DC-9514-EC870ADB9682}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B94600B1-D43F-40DC-9514-EC870ADB9682}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B94600B1-D43F-40DC-9514-EC870ADB9682}.Release|Any CPU.Build.0 = Release|Any CPU
+		{095FF923-B4E0-487C-8155-829C9CA020A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{095FF923-B4E0-487C-8155-829C9CA020A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{095FF923-B4E0-487C-8155-829C9CA020A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{095FF923-B4E0-487C-8155-829C9CA020A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{761786BA-E7BA-4C7E-A6A5-366F9B31C963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{761786BA-E7BA-4C7E-A6A5-366F9B31C963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{761786BA-E7BA-4C7E-A6A5-366F9B31C963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{761786BA-E7BA-4C7E-A6A5-366F9B31C963}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

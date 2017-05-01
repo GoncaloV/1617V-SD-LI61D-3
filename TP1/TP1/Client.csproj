@@ -77,7 +77,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConsoleApplication1\ClientClass.csproj">
+      <Project>{33ed5b6e-85f7-4c80-86fd-cf7e0e622e21}</Project>
+      <Name>ClientClass</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IServer\Interfaces.csproj">
+      <Project>{281B1F4A-7EC7-44EB-B13C-D1220C0B87A3}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

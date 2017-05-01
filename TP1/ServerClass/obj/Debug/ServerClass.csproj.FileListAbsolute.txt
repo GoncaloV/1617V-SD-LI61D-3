@@ -1,0 +1,8 @@
+C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\bin\Debug\ServerClass.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\bin\Debug\ServerClass.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\bin\Debug\IServer.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\bin\Debug\IServer.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\bin\Debug\IServer.dll.config
+C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\obj\Debug\ServerClass.csprojResolveAssemblyReference.cache
+C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\obj\Debug\ServerClass.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\obj\Debug\ServerClass.pdb

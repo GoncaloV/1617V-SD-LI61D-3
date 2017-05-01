@@ -1,0 +1,8 @@
+C:\Users\André Carvalho\Desktop\SD\TP1\RingAndKeyManager\bin\Debug\RingAndKeyManager.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\RingAndKeyManager\bin\Debug\RingAndKeyManager.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\RingAndKeyManager\bin\Debug\IServer.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\RingAndKeyManager\bin\Debug\IServer.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\RingAndKeyManager\bin\Debug\IServer.dll.config
+C:\Users\André Carvalho\Desktop\SD\TP1\RingAndKeyManager\obj\Debug\ManagerClass.csprojResolveAssemblyReference.cache
+C:\Users\André Carvalho\Desktop\SD\TP1\RingAndKeyManager\obj\Debug\RingAndKeyManager.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\RingAndKeyManager\obj\Debug\RingAndKeyManager.pdb

@@ -1,22 +1,39 @@
 ﻿using Interface;
 using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 
-namespace RingAndKeyManager
+namespace ManagerClass
 {
-    public class ManagerClass : MarshalByRefObject, IManagerServerSide, IManagerClientSide
+    public class ManagerClassImpl : MarshalByRefObject, IManagerServerSide, IManagerClientSide
     {
         LinkedList<IServer> servers;
         LinkedList<String> keys;
 
-        public ManagerClass()
+        public ManagerClassImpl()
         {
+            servers = new LinkedList<IServer>();
+            keys = new LinkedList<String>();
+
+            //initRing(servers);
+
             Console.WriteLine("ManagerClass construtor");
 
+        }
+
+        private void initRing(LinkedList<IServer> servers)
+        {
+            List<string> keys = ConfigurationManager.AppSettings
+                                .AllKeys.ToList()
+                                .FindAll(s => !"serverNumber".Equals(s));
+
+
+            Console.WriteLine();
+            throw new NotImplementedException();
         }
 
         public bool checkIfKeyExists(string key)
@@ -26,7 +43,8 @@ namespace RingAndKeyManager
 
         public IServer getRing()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Hello, darkness my old friend");
+            return null;
         }
 
         public int getServerId()

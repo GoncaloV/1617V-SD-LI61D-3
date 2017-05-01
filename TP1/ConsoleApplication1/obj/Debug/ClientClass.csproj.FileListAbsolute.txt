@@ -1,0 +1,10 @@
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\Server.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\Server.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\IServer.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\IServer.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\IServer.dll.config
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\obj\Debug\ClientClass.csprojResolveAssemblyReference.cache
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\obj\Debug\Server.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\obj\Debug\Server.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\RingAndKeyManager.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\RingAndKeyManager.pdb

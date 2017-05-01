@@ -16,3 +16,17 @@ C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\Client.cs
 C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\TP1.Form1.resources
 C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\TP1.Properties.Resources.resources
 C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\TP1.exe.config
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\TP1.exe
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\TP1.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\TP1.Form1.resources
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\TP1.Properties.Resources.resources
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\TP1.exe
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\TP1.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\IServer.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\Server.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\Server.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\IServer.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\IServer.dll.config
