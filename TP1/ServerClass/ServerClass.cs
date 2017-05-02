@@ -4,21 +4,16 @@ using System.Collections.Generic;
 
 namespace ServerClass
 {
-    class ServerClass : MarshalByRefObject, IServer
+    class ServerClassImpl : MarshalByRefObject, IServer
     {
         private Dictionary<String, String> map;
         private int id;
         private IManagerServerSide ring;
 
-        public ServerClass()
+        public ServerClassImpl()
         {
             Console.WriteLine("ServerClass construtor");
 
-        }
-
-        public void setRingReference(IManagerServerSide ring)
-        {
-            this.ring = ring; 
         }
 
         public int deletePair(SerializableAttribute key)

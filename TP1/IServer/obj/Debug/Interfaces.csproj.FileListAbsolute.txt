@@ -3,3 +3,4 @@ C:\Users\André Carvalho\Desktop\SD\TP1\IServer\bin\Debug\IServer.dll
 C:\Users\André Carvalho\Desktop\SD\TP1\IServer\bin\Debug\IServer.pdb
 C:\Users\André Carvalho\Desktop\SD\TP1\IServer\obj\Debug\IServer.dll
 C:\Users\André Carvalho\Desktop\SD\TP1\IServer\obj\Debug\IServer.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\IServer\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache

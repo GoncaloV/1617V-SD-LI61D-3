@@ -31,8 +31,6 @@ namespace ManagerClass
                                 .AllKeys.ToList()
                                 .FindAll(s => !"serverNumber".Equals(s));
 
-
-            Console.WriteLine();
             throw new NotImplementedException();
         }
 
@@ -41,7 +39,7 @@ namespace ManagerClass
             throw new NotImplementedException();
         }
 
-        public IServer getRing()
+        public String getRing()
         {
             Console.WriteLine("Hello, darkness my old friend");
             return null;
