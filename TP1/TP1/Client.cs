@@ -16,7 +16,7 @@ namespace TP1
         static void Main()
         {
 
-            string configfile = "TP1.exe.config";
+            string configfile = "Client.exe.config";
             RemotingConfiguration.Configure(configfile, false);
 
             Application.EnableVisualStyles();

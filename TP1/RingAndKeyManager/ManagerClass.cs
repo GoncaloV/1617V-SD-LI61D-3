@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Runtime.Remoting;
 
 namespace ManagerClass
 {
@@ -29,14 +29,26 @@ namespace ManagerClass
 
         private void initRing()
         {
-            ConfigurationManager.AppSettings.AllKeys
-                                .ToList()
-                                .ForEach(s => serverURLS.AddLast(ConfigurationManager.AppSettings.Get(s)));
+            List<String> serverListKey = ConfigurationManager.AppSettings.AllKeys.ToList();
 
-            foreach(String url in serverURLS)
+            WellKnownClientTypeEntry[] entries = RemotingConfiguration.GetRegisteredWellKnownClientTypes();
+            WellKnownClientTypeEntry entry = entries[0];
+
+            if (entry == null)
+                throw new RemotingException("Type not found");
+
+
+
+            //Get the server URLS so we can deliver them to the client
+            foreach (String key in serverListKey)
             {
-                servers.AddLast((IServer)Activator.GetObject(typeof(IServer), url));
+                serverURLS.AddLast(ConfigurationManager.AppSettings.Get(key));
+
+                servers.AddLast((IServer) Activator.GetObject(entry.ObjectType, ConfigurationManager.AppSettings.Get(key)));
+
             }
+
+
         }
 
         public bool checkIfKeyExists(string key)
@@ -47,7 +59,13 @@ namespace ManagerClass
         public String getRing()
         {
             Console.WriteLine("Hello, darkness my old friend");
+            try { 
+                String a = servers.ElementAt(0).test();
+            }catch(Exception e)
+            {
 
+
+            }
             return serverURLS.ElementAt(0);
         }
 

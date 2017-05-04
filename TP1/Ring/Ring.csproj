@@ -49,9 +49,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RingAndKeyManager\ManagerClass.csproj">
+    <ProjectReference Include="..\IServer\Interfaces.csproj">
+      <Project>{281b1f4a-7ec7-44eb-b13c-d1220c0b87a3}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RingAndKeyManager\ManagerController.csproj">
       <Project>{b94600b1-d43f-40dc-9514-ec870adb9682}</Project>
-      <Name>ManagerClass</Name>
+      <Name>ManagerController</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

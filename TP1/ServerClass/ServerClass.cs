@@ -12,6 +12,8 @@ namespace ServerClass
         private IManagerServerSide ring;
 
         public ServerClassImpl() { 
+
+            /*
             WellKnownClientTypeEntry[] entries = RemotingConfiguration.GetRegisteredWellKnownClientTypes();
             WellKnownClientTypeEntry entry = entries[0];
 
@@ -19,7 +21,7 @@ namespace ServerClass
                 throw new RemotingException("Type not found");
 
             ring = (IManagerServerSide)Activator.GetObject(entry.ObjectType, entry.ObjectUrl);
-
+            */
             Console.WriteLine("ServerClass construtor");
 
         }
@@ -46,6 +48,8 @@ namespace ServerClass
 
         public string test()
         {
+
+            Console.WriteLine("I came to talk to you again...");
             return "ola";
         }
     }

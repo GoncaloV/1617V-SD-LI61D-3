@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TP1</RootNamespace>
-    <AssemblyName>TP1</AssemblyName>
+    <AssemblyName>Client</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -82,17 +82,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApplication1\ClientClass.csproj">
+    <ProjectReference Include="..\ConsoleApplication1\ClientController.csproj">
       <Project>{33ed5b6e-85f7-4c80-86fd-cf7e0e622e21}</Project>
-      <Name>ClientClass</Name>
+      <Name>ClientController</Name>
     </ProjectReference>
     <ProjectReference Include="..\IServer\Interfaces.csproj">
-      <Project>{281B1F4A-7EC7-44EB-B13C-D1220C0B87A3}</Project>
+      <Project>{281b1f4a-7ec7-44eb-b13c-d1220c0b87a3}</Project>
       <Name>Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ServerClass\ServerClass.csproj">
-      <Project>{761786ba-e7ba-4c7e-a6a5-366f9b31c963}</Project>
-      <Name>ServerClass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
