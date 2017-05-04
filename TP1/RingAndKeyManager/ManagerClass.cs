@@ -13,13 +13,15 @@ namespace ManagerClass
     {
         LinkedList<IServer> servers;
         LinkedList<String> keys;
+        LinkedList<String> serverURLS;
 
         public ManagerClassImpl()
         {
             servers = new LinkedList<IServer>();
             keys = new LinkedList<String>();
+            serverURLS = new LinkedList<String>();
 
-            //initRing(servers);
+            initRing(servers);
 
             Console.WriteLine("ManagerClass construtor");
 
@@ -27,9 +29,9 @@ namespace ManagerClass
 
         private void initRing(LinkedList<IServer> servers)
         {
-            List<string> keys = ConfigurationManager.AppSettings
-                                .AllKeys.ToList()
-                                .FindAll(s => !"serverNumber".Equals(s));
+            ConfigurationManager.AppSettings.AllKeys
+                                .ToList()
+                                .ForEach(s => serverURLS.AddLast(ConfigurationManager.AppSettings.Get(s)));
 
             throw new NotImplementedException();
         }
