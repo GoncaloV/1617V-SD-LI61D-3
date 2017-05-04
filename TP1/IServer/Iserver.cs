@@ -9,6 +9,8 @@ namespace Interface
         int storePair(SerializableAttribute key, SerializableAttribute value);
         Object readPair(SerializableAttribute key);
         int deletePair(SerializableAttribute key);
+
+        String test();
     }
 
     public interface IManagerServerSide
@@ -21,13 +23,12 @@ namespace Interface
 
     public interface IManagerClientSide
     {
-        //Return the URL of the server.Returning an object will be difficult as fuck
         String getRing();
     }
 
     public interface IClientInterface
     {
-        void storePairOnServer(SerializableAttribute key, SerializableAttribute value);
+        void storePairOnServer(String key, String value);
         void readPairFromServer(SerializableAttribute key);
         void deletePairFromServer(SerializableAttribute key);
         void associateWithServer();

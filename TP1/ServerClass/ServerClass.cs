@@ -1,6 +1,7 @@
 ﻿using Interface;
 using System;
 using System.Collections.Generic;
+using System.Runtime.Remoting;
 
 namespace ServerClass
 {
@@ -10,8 +11,15 @@ namespace ServerClass
         private int id;
         private IManagerServerSide ring;
 
-        public ServerClassImpl()
-        {
+        public ServerClassImpl() { 
+            WellKnownClientTypeEntry[] entries = RemotingConfiguration.GetRegisteredWellKnownClientTypes();
+            WellKnownClientTypeEntry entry = entries[0];
+
+            if (entry == null)
+                throw new RemotingException("Type not found");
+
+            ring = (IManagerServerSide)Activator.GetObject(entry.ObjectType, entry.ObjectUrl);
+
             Console.WriteLine("ServerClass construtor");
 
         }
@@ -34,6 +42,11 @@ namespace ServerClass
         public int storePair(SerializableAttribute key, SerializableAttribute value)
         {
             throw new NotImplementedException();
+        }
+
+        public string test()
+        {
+            return "ola";
         }
     }
 }

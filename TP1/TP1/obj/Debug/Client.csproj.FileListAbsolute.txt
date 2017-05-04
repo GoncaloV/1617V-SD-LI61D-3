@@ -30,3 +30,18 @@ C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\Server.pdb
 C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\IServer.pdb
 C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\IServer.dll.config
 C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\TP1.Window.resources
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\bin\Debug\TP1.exe
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\bin\Debug\Server.dll
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\bin\Debug\Interfaces.dll
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\bin\Debug\ServerClass.dll
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\bin\Debug\Server.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\bin\Debug\Interfaces.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\bin\Debug\ServerClass.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\TP1.Properties.Resources.resources
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\TP1.Window.resources
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\TP1.exe
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\TP1.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\bin\Debug\TP1.exe.config
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\bin\Debug\TP1.pdb

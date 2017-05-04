@@ -6,3 +6,11 @@ C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\bin\Debug\IServer.dll.config
 C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\obj\Debug\ServerClass.csprojResolveAssemblyReference.cache
 C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\obj\Debug\ServerClass.dll
 C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\obj\Debug\ServerClass.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ServerClass\bin\Debug\ServerClass.dll.config
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ServerClass\bin\Debug\ServerClass.dll
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ServerClass\bin\Debug\ServerClass.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ServerClass\bin\Debug\Interfaces.dll
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ServerClass\bin\Debug\Interfaces.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ServerClass\obj\Debug\ServerClass.dll
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ServerClass\obj\Debug\ServerClass.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ServerClass\obj\Debug\ServerClass.csprojResolveAssemblyReference.cache

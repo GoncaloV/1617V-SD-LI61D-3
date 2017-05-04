@@ -90,6 +90,10 @@
       <Project>{281B1F4A-7EC7-44EB-B13C-D1220C0B87A3}</Project>
       <Name>Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ServerClass\ServerClass.csproj">
+      <Project>{761786ba-e7ba-4c7e-a6a5-366f9b31c963}</Project>
+      <Name>ServerClass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

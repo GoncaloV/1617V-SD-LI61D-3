@@ -8,3 +8,11 @@ C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\obj\Debug\Server.dll
 C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\obj\Debug\Server.pdb
 C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\RingAndKeyManager.dll
 C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\RingAndKeyManager.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ConsoleApplication1\bin\Debug\Server.dll.config
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ConsoleApplication1\bin\Debug\Server.dll
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ConsoleApplication1\bin\Debug\Server.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ConsoleApplication1\bin\Debug\Interfaces.dll
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ConsoleApplication1\bin\Debug\Interfaces.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ConsoleApplication1\obj\Debug\ClientClass.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ConsoleApplication1\obj\Debug\Server.dll
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ConsoleApplication1\obj\Debug\Server.pdb

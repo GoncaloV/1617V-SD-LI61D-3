@@ -14,11 +14,11 @@ namespace ClientClass
         public ClientClassImpl()
         {
             Console.WriteLine("ClientClass construtor");
-            ringManager = connectToRing();
+            connectToRing();
 
         }
 
-        private IManagerClientSide connectToRing()
+        private void connectToRing()
         {
             WellKnownClientTypeEntry[] entries = RemotingConfiguration.GetRegisteredWellKnownClientTypes();
             WellKnownClientTypeEntry entry = entries[0];
@@ -26,15 +26,23 @@ namespace ClientClass
             if (entry == null)
                 throw new RemotingException("Type not found");
 
-            IManagerClientSide ret = (IManagerClientSide)Activator.GetObject(entry.ObjectType, entry.ObjectUrl);
-
-            return ret;
+            ringManager = (IManagerClientSide)Activator.GetObject(entry.ObjectType, entry.ObjectUrl);
         }
 
         public void associateWithServer()
         {
             try { 
-                ringManager.getRing();
+                String url = ringManager.getRing();
+
+                WellKnownClientTypeEntry[] entries = RemotingConfiguration.GetRegisteredWellKnownClientTypes();
+                WellKnownClientTypeEntry entry = entries[0];
+
+                if (entry == null)
+                    throw new RemotingException("Type not found");
+
+                associatedServer = (IServer)Activator.GetObject(entry.ObjectType, url);
+
+                Console.WriteLine();
             }catch(Exception e)
             {
                 Console.WriteLine("Cannot talk to the Ring");
@@ -51,9 +59,16 @@ namespace ClientClass
             throw new NotImplementedException();
         }
 
-        public void storePairOnServer(SerializableAttribute key, SerializableAttribute value)
+        public void storePairOnServer(String key, String value)
         {
-            throw new NotImplementedException();
+            try
+            {
+                String a = associatedServer.test();
+                Console.WriteLine();
+            }catch(Exception e)
+            {
+                Console.WriteLine("Deu merda");
+            }
         }
        
     }

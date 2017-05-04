@@ -21,19 +21,22 @@ namespace ManagerClass
             keys = new LinkedList<String>();
             serverURLS = new LinkedList<String>();
 
-            initRing(servers);
+            initRing();
 
             Console.WriteLine("ManagerClass construtor");
 
         }
 
-        private void initRing(LinkedList<IServer> servers)
+        private void initRing()
         {
             ConfigurationManager.AppSettings.AllKeys
                                 .ToList()
                                 .ForEach(s => serverURLS.AddLast(ConfigurationManager.AppSettings.Get(s)));
 
-            throw new NotImplementedException();
+            foreach(String url in serverURLS)
+            {
+                servers.AddLast((IServer)Activator.GetObject(typeof(IServer), url));
+            }
         }
 
         public bool checkIfKeyExists(string key)
@@ -44,7 +47,8 @@ namespace ManagerClass
         public String getRing()
         {
             Console.WriteLine("Hello, darkness my old friend");
-            return null;
+
+            return serverURLS.ElementAt(0);
         }
 
         public int getServerId()

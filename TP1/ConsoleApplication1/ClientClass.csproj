@@ -54,10 +54,9 @@
       <Project>{281B1F4A-7EC7-44EB-B13C-D1220C0B87A3}</Project>
       <Name>Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RingAndKeyManager\ManagerClass.csproj">
-      <Project>{b94600b1-d43f-40dc-9514-ec870adb9682}</Project>
-      <Name>ManagerClass</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
