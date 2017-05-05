@@ -13,7 +13,6 @@ namespace ServerClass
 
         public ServerClassImpl() { 
             Console.WriteLine("ServerClass construtor");
-
         }
 
         public int deletePair(String key)

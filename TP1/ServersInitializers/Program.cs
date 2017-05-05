@@ -12,6 +12,7 @@ namespace ServersInitializers
 
     //It starts 5 servers.The problem is that it appears as if the servers start but windows forgets to init the servers on the machine.
     //Find a way to exec 5 servers by hand.Good luck...Bye!
+    //Recommended way:Open 5 cmds where the Server.exe is located.In each cmd run Server.exe ServerX, where X can be a number between 1 and 5
     class Program
     {
         static void Main(string[] args)

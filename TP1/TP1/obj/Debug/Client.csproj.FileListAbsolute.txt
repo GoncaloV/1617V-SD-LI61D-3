@@ -35,3 +35,13 @@ C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\Client.csprojResolveAssemb
 C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\TP1.Properties.Resources.resources
 C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\TP1.Window.resources
 C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\Client.exe.config
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\Client.exe
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\Client.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\ClientController.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\Interfaces.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\ClientController.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\Interfaces.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\Interfaces.dll.config
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\Client.exe
+C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\Client.pdb

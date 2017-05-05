@@ -15,14 +15,12 @@ namespace ManagerClass
 
         public ManagerClassImpl()
         {
+            Console.WriteLine("ManagerClass construtor");
             servers = new LinkedList<IServer>();
             keys = new LinkedList<String>();
             serverURLS = new LinkedList<String>();
 
             initRing();
-
-            Console.WriteLine("ManagerClass construtor");
-
         }
 
         private void initRing()

@@ -17,7 +17,7 @@ namespace Server
                 config = args[0];
 
             RemotingConfiguration.Configure(config + ".config" , false);
-
+           
             Console.WriteLine("Server for config: " + config + " intialized\nWaiting for requests...");
             Console.ReadLine();
             Console.WriteLine("Server for config " + config + " finished");

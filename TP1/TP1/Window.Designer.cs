@@ -134,7 +134,7 @@
             this.Controls.Add(this.connectButton);
             this.Controls.Add(this.descriptionBox);
             this.Name = "Window";
-            this.Text = "Window";
+            this.Text = "SD";
             this.ResumeLayout(false);
             this.PerformLayout();
 
