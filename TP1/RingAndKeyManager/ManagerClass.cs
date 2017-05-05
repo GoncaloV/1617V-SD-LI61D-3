@@ -3,8 +3,6 @@ using System;
 using System.Configuration;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Runtime.Remoting;
 
 namespace ManagerClass
@@ -37,8 +35,6 @@ namespace ManagerClass
             if (entry == null)
                 throw new RemotingException("Type not found");
 
-
-
             //Get the server URLS so we can deliver them to the client
             foreach (String key in serverListKey)
             {
@@ -46,33 +42,39 @@ namespace ManagerClass
 
                 servers.AddLast((IServer) Activator.GetObject(entry.ObjectType, ConfigurationManager.AppSettings.Get(key)));
 
-            }
+                //Init connection on the server with the Ring
+                try
+                {
+                    servers.Last().init(servers.Count());
+                }catch(Exception e)
+                {
+                    //If we cannot connect to the server we assume that isn´t a valid server, so we remove it from our list
+                    servers.RemoveLast();
+                    serverURLS.RemoveLast();
+                    Console.WriteLine("Cannot init connection between Ring and Server" + key);
+                }
 
+            }
 
         }
 
-        public bool checkIfKeyExists(string key)
+        public bool checkIfKeyExists(string key, int originServer)
         {
             throw new NotImplementedException();
         }
 
         public String getRing()
         {
-            Console.WriteLine("Hello, darkness my old friend");
-            try { 
-                String a = servers.ElementAt(0).test();
-            }catch(Exception e)
-            {
+            Console.WriteLine("Get ring method called!");
 
+            Random r = new Random();
+            int server = r.Next(servers.Count);
 
-            }
-            return serverURLS.ElementAt(0);
+            Console.WriteLine("Returned server number " + server);
+
+            return serverURLS.ElementAt(server);
         }
 
-        public int getServerId()
-        {
-            throw new NotImplementedException();
-        }
 
         public bool ReplicateInformationBetweenServers(int id, string Key, SerializableAttribute val)
         {

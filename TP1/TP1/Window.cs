@@ -1,13 +1,6 @@
 ﻿using ClientClass;
 using Interface;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TP1
@@ -22,14 +15,32 @@ namespace TP1
             clientController = new ClientClassImpl();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void connectButton_Click(object sender, EventArgs e)
         {
-            clientController.associateWithServer();
+            descriptionBox.Text += clientController.associateWithServer();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void pushButton_Click(object sender, EventArgs e)
         {
-            clientController.storePairOnServer("OLA", "OLA");
+            String key = keyText.Text;
+            String value = valueText.Text;
+
+            descriptionBox.Text += clientController.storePairOnServer(key, value);
+        }
+
+        private void pullButton_Click(object sender, EventArgs e)
+        {
+            String key = keyText.Text;
+
+            descriptionBox.Text += clientController.readPairFromServer(key);
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            String key = keyText.Text;
+
+            descriptionBox.Text += clientController.deletePairFromServer(key);
+
         }
     }
 }

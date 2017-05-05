@@ -12,16 +12,6 @@ namespace ServerClass
         private IManagerServerSide ring;
 
         public ServerClassImpl() { 
-
-            /*
-            WellKnownClientTypeEntry[] entries = RemotingConfiguration.GetRegisteredWellKnownClientTypes();
-            WellKnownClientTypeEntry entry = entries[0];
-
-            if (entry == null)
-                throw new RemotingException("Type not found");
-
-            ring = (IManagerServerSide)Activator.GetObject(entry.ObjectType, entry.ObjectUrl);
-            */
             Console.WriteLine("ServerClass construtor");
 
         }
@@ -31,12 +21,21 @@ namespace ServerClass
             throw new NotImplementedException();
         }
 
-        public object readPair(SerializableAttribute key)
+        public void init(int serverID)
         {
-            throw new NotImplementedException();
+            
+            WellKnownClientTypeEntry[] entries = RemotingConfiguration.GetRegisteredWellKnownClientTypes();
+            WellKnownClientTypeEntry entry = entries[0];
+
+            if (entry == null)
+                throw new RemotingException("Type not found");
+
+            ring = (IManagerServerSide)Activator.GetObject(entry.ObjectType, entry.ObjectUrl);
+
+            id = serverID;
         }
 
-        public void setServerid()
+        public object readPair(SerializableAttribute key)
         {
             throw new NotImplementedException();
         }

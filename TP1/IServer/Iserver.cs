@@ -5,20 +5,19 @@ namespace Interface
 {
     public interface IServer
     {
-        void setServerid();
         int storePair(SerializableAttribute key, SerializableAttribute value);
         Object readPair(SerializableAttribute key);
         int deletePair(SerializableAttribute key);
+        void init(int serverID);
 
         String test();
     }
 
     public interface IManagerServerSide
     {
-        Boolean checkIfKeyExists(String key);
+        Boolean checkIfKeyExists(String key, int originServer);
         SerializableAttribute searchServersForObject(String key);
         Boolean ReplicateInformationBetweenServers(int id, String Key, SerializableAttribute val);
-        int getServerId();
     }
 
     public interface IManagerClientSide
@@ -28,10 +27,10 @@ namespace Interface
 
     public interface IClientInterface
     {
-        void storePairOnServer(String key, String value);
-        void readPairFromServer(SerializableAttribute key);
-        void deletePairFromServer(SerializableAttribute key);
-        void associateWithServer();
+        String storePairOnServer(String key, String value);
+        String readPairFromServer(String key);
+        String deletePairFromServer(String key);
+        String associateWithServer();
 
     }
 

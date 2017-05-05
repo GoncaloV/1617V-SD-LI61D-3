@@ -28,69 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.descriptionBox = new System.Windows.Forms.RichTextBox();
+            this.connectButton = new System.Windows.Forms.Button();
+            this.pushButton = new System.Windows.Forms.Button();
+            this.pullButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.keyText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.valueText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // descriptionBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 261);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1141, 239);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.descriptionBox.Location = new System.Drawing.Point(12, 261);
+            this.descriptionBox.Name = "descriptionBox";
+            this.descriptionBox.Size = new System.Drawing.Size(1141, 239);
+            this.descriptionBox.TabIndex = 0;
+            this.descriptionBox.Text = "";
             // 
-            // button1
+            // connectButton
             // 
-            this.button1.Location = new System.Drawing.Point(931, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(222, 72);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Connect To Ring";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.connectButton.Location = new System.Drawing.Point(931, 13);
+            this.connectButton.Name = "connectButton";
+            this.connectButton.Size = new System.Drawing.Size(222, 72);
+            this.connectButton.TabIndex = 1;
+            this.connectButton.Text = "Connect To Ring";
+            this.connectButton.UseVisualStyleBackColor = true;
+            this.connectButton.Click += new System.EventHandler(this.connectButton_Click);
             // 
-            // button2
+            // pushButton
             // 
-            this.button2.Location = new System.Drawing.Point(12, 169);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(222, 72);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Push Values";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.pushButton.Location = new System.Drawing.Point(12, 169);
+            this.pushButton.Name = "pushButton";
+            this.pushButton.Size = new System.Drawing.Size(222, 72);
+            this.pushButton.TabIndex = 2;
+            this.pushButton.Text = "Push Values";
+            this.pushButton.UseVisualStyleBackColor = true;
+            this.pushButton.Click += new System.EventHandler(this.pushButton_Click);
             // 
-            // button3
+            // pullButton
             // 
-            this.button3.Location = new System.Drawing.Point(252, 169);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(222, 72);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Pull Values";
-            this.button3.UseVisualStyleBackColor = true;
+            this.pullButton.Location = new System.Drawing.Point(252, 169);
+            this.pullButton.Name = "pullButton";
+            this.pullButton.Size = new System.Drawing.Size(222, 72);
+            this.pullButton.TabIndex = 3;
+            this.pullButton.Text = "Pull Values";
+            this.pullButton.UseVisualStyleBackColor = true;
+            this.pullButton.Click += new System.EventHandler(this.pullButton_Click);
             // 
-            // button4
+            // deleteButton
             // 
-            this.button4.Location = new System.Drawing.Point(490, 169);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(222, 72);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Delete Value";
-            this.button4.UseVisualStyleBackColor = true;
+            this.deleteButton.Location = new System.Drawing.Point(490, 169);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(222, 72);
+            this.deleteButton.TabIndex = 4;
+            this.deleteButton.Text = "Delete Value";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
-            // textBox1
+            // keyText
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(700, 31);
-            this.textBox1.TabIndex = 5;
+            this.keyText.Location = new System.Drawing.Point(12, 34);
+            this.keyText.Name = "keyText";
+            this.keyText.Size = new System.Drawing.Size(700, 31);
+            this.keyText.TabIndex = 5;
             // 
             // label1
             // 
@@ -110,12 +112,12 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Value";
             // 
-            // textBox2
+            // valueText
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 112);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(700, 31);
-            this.textBox2.TabIndex = 7;
+            this.valueText.Location = new System.Drawing.Point(12, 112);
+            this.valueText.Name = "valueText";
+            this.valueText.Size = new System.Drawing.Size(700, 31);
+            this.valueText.TabIndex = 7;
             // 
             // Window
             // 
@@ -123,14 +125,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1165, 514);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.valueText);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.keyText);
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.pullButton);
+            this.Controls.Add(this.pushButton);
+            this.Controls.Add(this.connectButton);
+            this.Controls.Add(this.descriptionBox);
             this.Name = "Window";
             this.Text = "Window";
             this.ResumeLayout(false);
@@ -140,14 +142,14 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox descriptionBox;
+        private System.Windows.Forms.Button connectButton;
+        private System.Windows.Forms.Button pushButton;
+        private System.Windows.Forms.Button pullButton;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.TextBox keyText;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox valueText;
     }
 }

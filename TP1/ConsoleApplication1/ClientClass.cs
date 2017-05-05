@@ -18,7 +18,7 @@ namespace ClientClass
 
         }
 
-        private void connectToRing()
+        private String connectToRing()
         {
             WellKnownClientTypeEntry[] entries = RemotingConfiguration.GetRegisteredWellKnownClientTypes();
             WellKnownClientTypeEntry entry = entries[0];
@@ -27,9 +27,11 @@ namespace ClientClass
                 throw new RemotingException("Type not found");
 
             ringManager = (IManagerClientSide)Activator.GetObject(entry.ObjectType, entry.ObjectUrl);
+
+            return "Connected!";
         }
 
-        public void associateWithServer()
+        public String associateWithServer()
         {
             try { 
                 String url = ringManager.getRing();
@@ -42,32 +44,34 @@ namespace ClientClass
 
                 associatedServer = (IServer)Activator.GetObject(entry.ObjectType, url);
 
-                Console.WriteLine();
+                return "Associated with server: " + url;
             }catch(Exception e)
             {
-                Console.WriteLine("Cannot talk to the Ring");
+                return "Cannot connect to Ring";
             }
         }
 
-        public void deletePairFromServer(SerializableAttribute key)
+        public String deletePairFromServer(String key)
         {
             throw new NotImplementedException();
         }
 
-        public void readPairFromServer(SerializableAttribute key)
+        public String readPairFromServer(String key)
         {
             throw new NotImplementedException();
         }
 
-        public void storePairOnServer(String key, String value)
+        public String storePairOnServer(String key, String value)
         {
             try
             {
                 String a = associatedServer.test();
                 Console.WriteLine();
+
+                return "Pushed " + key + " to Server";
             }catch(Exception e)
             {
-                Console.WriteLine("Deu merda");
+                return "Cannot communicate with Server";
             }
         }
        
