@@ -16,7 +16,7 @@ namespace ServerClass
 
         }
 
-        public int deletePair(SerializableAttribute key)
+        public int deletePair(String key)
         {
             throw new NotImplementedException();
         }
@@ -35,21 +35,14 @@ namespace ServerClass
             id = serverID;
         }
 
-        public object readPair(SerializableAttribute key)
+        public String readPair(String key)
         {
             throw new NotImplementedException();
         }
 
-        public int storePair(SerializableAttribute key, SerializableAttribute value)
+        public int storePair(String key, String value)
         {
             throw new NotImplementedException();
-        }
-
-        public string test()
-        {
-
-            Console.WriteLine("I came to talk to you again...");
-            return "ola";
         }
     }
 }

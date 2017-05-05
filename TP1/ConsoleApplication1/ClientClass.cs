@@ -53,20 +53,33 @@ namespace ClientClass
 
         public String deletePairFromServer(String key)
         {
-            throw new NotImplementedException();
+            try
+            {
+                associatedServer.deletePair(key);
+                return "Deleted value for key: " + key;
+            }catch(Exception e)
+            {
+                return "Cannot communicate with Server";
+            }
         }
 
         public String readPairFromServer(String key)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return "Value for key: " + key + " is " + associatedServer.readPair(key);
+            }
+            catch (Exception e)
+            {
+                return "Cannot communicate with Server";
+            }
         }
 
         public String storePairOnServer(String key, String value)
         {
             try
             {
-                String a = associatedServer.test();
-                Console.WriteLine();
+                associatedServer.storePair(key, value);
 
                 return "Pushed " + key + " to Server";
             }catch(Exception e)

@@ -31,17 +31,7 @@ C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\TP
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\obj\Debug\TP1.pdb
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\bin\Debug\TP1.exe.config
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\TP1\bin\Debug\TP1.pdb
-C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\Client.exe.config
-C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\Client.exe
-C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\Client.pdb
-C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\ClientController.dll
-C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\Interfaces.dll
-C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\ClientController.pdb
-C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\Interfaces.pdb
-C:\Users\André Carvalho\Desktop\SD\TP1\TP1\bin\Debug\Interfaces.dll.config
 C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\Client.csprojResolveAssemblyReference.cache
 C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\TP1.Properties.Resources.resources
 C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\TP1.Window.resources
 C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\Client.csproj.GenerateResource.Cache
-C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\Client.exe
-C:\Users\André Carvalho\Desktop\SD\TP1\TP1\obj\Debug\Client.pdb

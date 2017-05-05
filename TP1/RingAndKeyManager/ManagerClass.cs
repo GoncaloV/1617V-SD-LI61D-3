@@ -76,7 +76,7 @@ namespace ManagerClass
         }
 
 
-        public bool ReplicateInformationBetweenServers(int id, string Key, SerializableAttribute val)
+        public bool ReplicateInformationBetweenServers(int id, string Key, String val)
         {
             throw new NotImplementedException();
         }

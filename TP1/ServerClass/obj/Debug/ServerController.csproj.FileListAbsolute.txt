@@ -3,5 +3,6 @@ C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\bin\Debug\ServerController.p
 C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\bin\Debug\Interfaces.dll
 C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\bin\Debug\Interfaces.pdb
 C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\bin\Debug\Interfaces.dll.config
+C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\obj\Debug\ServerController.csprojResolveAssemblyReference.cache
 C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\obj\Debug\ServerController.dll
 C:\Users\André Carvalho\Desktop\SD\TP1\ServerClass\obj\Debug\ServerController.pdb
