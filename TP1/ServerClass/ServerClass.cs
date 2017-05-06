@@ -82,9 +82,51 @@ namespace ServerClass
         }
 
         /**
+         * Reads a pair locally. Returns null if not found and does not ask the ring server to find it, unlike readPair.
+         * Should only be called by the Ring while processing another server's readPair.
+         * */
+        public String readPairLocally(String key)
+        {
+            if (map.ContainsKey(key))
+            {
+                String value;
+                if (map.TryGetValue(key, out value))
+                {
+                    return value;
+                }
+                else return null;
+            }
+            return null;
+        }
+        /**
          * Stores a pair locally and replicates it across two other servers.
          * */
         public void storePair(String key, String value)
+        {
+            Task.Factory.StartNew(() =>
+            {
+                try
+                {
+                    if (!map.ContainsKey(key) && !ring.checkIfKeyExists(key, id))
+                    {
+                        map.Add(key, value);
+                        if (!ring.ReplicateInformationBetweenServers(id, key, value))
+                            throw new Exception("Failed to replicate.");
+                    }
+                    else throw new Exception("Key does not exist.");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+            });
+        }
+
+        /**
+         * Stores a pair locally but does not replicate it.
+         * Should only be called by the Ring while processing another server's storePair.
+         * */
+        public void storePairLocally(String key, String value)
         {
             Task.Factory.StartNew(() =>
             {
