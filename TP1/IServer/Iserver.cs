@@ -25,7 +25,7 @@ namespace Interface
 
     public interface IClientInterface
     {
-        String storePairOnServer(String key, String value);
+        String storePairOnServer(String key, int student);
         String readPairFromServer(String key);
         String deletePairFromServer(String key);
         String associateWithServer();

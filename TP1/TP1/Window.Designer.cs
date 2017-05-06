@@ -36,7 +36,7 @@
             this.keyText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.valueText = new System.Windows.Forms.TextBox();
+            this.studentBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // descriptionBox
@@ -89,9 +89,9 @@
             // 
             // keyText
             // 
-            this.keyText.Location = new System.Drawing.Point(12, 34);
+            this.keyText.Location = new System.Drawing.Point(17, 34);
             this.keyText.Name = "keyText";
-            this.keyText.Size = new System.Drawing.Size(700, 31);
+            this.keyText.Size = new System.Drawing.Size(695, 31);
             this.keyText.TabIndex = 5;
             // 
             // label1
@@ -112,20 +112,21 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Value";
             // 
-            // valueText
+            // studentBox
             // 
-            this.valueText.Location = new System.Drawing.Point(12, 112);
-            this.valueText.Name = "valueText";
-            this.valueText.Size = new System.Drawing.Size(700, 31);
-            this.valueText.TabIndex = 7;
+            this.studentBox.FormattingEnabled = true;
+            this.studentBox.Location = new System.Drawing.Point(17, 112);
+            this.studentBox.Name = "studentBox";
+            this.studentBox.Size = new System.Drawing.Size(695, 33);
+            this.studentBox.TabIndex = 9;
             // 
             // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1165, 514);
+            this.Controls.Add(this.studentBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.valueText);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.keyText);
             this.Controls.Add(this.deleteButton);
@@ -150,6 +151,6 @@
         private System.Windows.Forms.TextBox keyText;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox valueText;
+        private System.Windows.Forms.ComboBox studentBox;
     }
 }

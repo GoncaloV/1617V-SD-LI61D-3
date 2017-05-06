@@ -1,6 +1,9 @@
 ﻿using ClientClass;
 using Interface;
 using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace TP1
@@ -10,11 +13,21 @@ namespace TP1
         private readonly IClientInterface clientController;
         private bool isConnectedToServer = false;
 
+        private List<String> studentOptions;
+
         public Window()
         {
             InitializeComponent();
             clientController = new ClientClassImpl();
-            changeServerControllersState();
+            initComboBox();
+            //changeServerControllersState();    
+        }
+
+        private void initComboBox()
+        {
+            studentOptions = ConfigurationManager.AppSettings.AllKeys.ToList();
+            studentBox.Items.AddRange(studentOptions.ToArray());
+
         }
 
         private void changeServerControllersState()
@@ -40,14 +53,28 @@ namespace TP1
         private void pushButton_Click(object sender, EventArgs e)
         {
             String key = keyText.Text;
-            String value = valueText.Text;
 
-            descriptionBox.Text += clientController.storePairOnServer(key, value);
+            if (key.Length == 0)
+            {
+                descriptionBox.Text += "Input a key first\n";
+                return;
+            }
+
+            int student = studentBox.SelectedIndex;
+
+            descriptionBox.Text += (student != -1) ? clientController.storePairOnServer(key, student) : "Select a student first\n";
+
         }
 
         private void pullButton_Click(object sender, EventArgs e)
         {
             String key = keyText.Text;
+
+            if (key.Length == 0)
+            {
+                descriptionBox.Text += "Input a key first\n";
+                return;
+            }
 
             descriptionBox.Text += clientController.readPairFromServer(key);
         }
@@ -55,6 +82,12 @@ namespace TP1
         private void deleteButton_Click(object sender, EventArgs e)
         {
             String key = keyText.Text;
+
+            if (key.Length == 0)
+            {
+                descriptionBox.Text += "Input a key first\n";
+                return;
+            }
 
             descriptionBox.Text += clientController.deletePairFromServer(key);
 

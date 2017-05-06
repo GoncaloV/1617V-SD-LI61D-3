@@ -7,3 +7,4 @@ C:\Users\André Carvalho\Desktop\SD\TP1\IServer\bin\Debug\Interfaces.dll
 C:\Users\André Carvalho\Desktop\SD\TP1\IServer\bin\Debug\Interfaces.pdb
 C:\Users\André Carvalho\Desktop\SD\TP1\IServer\obj\Debug\Interfaces.dll
 C:\Users\André Carvalho\Desktop\SD\TP1\IServer\obj\Debug\Interfaces.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\IServer\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache
