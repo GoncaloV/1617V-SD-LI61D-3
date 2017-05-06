@@ -58,7 +58,15 @@ namespace ManagerClass
 
         public bool checkIfKeyExists(string key, int originServer)
         {
-            throw new NotImplementedException();
+            foreach (KeyWrapper keyW in keys)
+            {
+                if (keyW.getKey().Equals(key) && keyW.getServers().Contains(originServer))
+                {
+                    return true;
+                }
+                return false;
+            }
+            return false;
         }
 
         public String getRing()
@@ -81,7 +89,11 @@ namespace ManagerClass
 
         public void deleteInformation(string key, int id)
         {
-            throw new NotImplementedException();
+            foreach (KeyWrapper keyW in keys)
+            {
+                if (keyW.getKey().Equals(key))
+                    keyW.removeServerFromKey(id);
+            }
         }
 
         public string searchServersForObject(string key)
