@@ -8,16 +8,33 @@ namespace TP1
     public partial class Window : Form
     {
         private readonly IClientInterface clientController;
+        private bool isConnectedToServer = false;
 
         public Window()
         {
             InitializeComponent();
             clientController = new ClientClassImpl();
+            changeServerControllersState();
+        }
+
+        private void changeServerControllersState()
+        {
+            pushButton.Enabled = isConnectedToServer;
+            pullButton.Enabled = isConnectedToServer;
+            deleteButton.Enabled = isConnectedToServer;
         }
 
         private void connectButton_Click(object sender, EventArgs e)
         {
-            descriptionBox.Text += clientController.associateWithServer();
+            String result = clientController.associateWithServer();
+
+            descriptionBox.Text += result;
+
+            if (result.Contains("Associated")) { 
+                isConnectedToServer = true;
+                changeServerControllersState();
+            }
+
         }
 
         private void pushButton_Click(object sender, EventArgs e)
