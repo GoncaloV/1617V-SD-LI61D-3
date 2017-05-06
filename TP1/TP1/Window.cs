@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TP1
@@ -39,15 +40,24 @@ namespace TP1
 
         private void connectButton_Click(object sender, EventArgs e)
         {
-            String result = clientController.associateWithServer();
 
-            descriptionBox.Text += result;
+            progressBar.Visible = true;
 
-            if (result.Contains("Associated")) { 
-                isConnectedToServer = true;
-                changeServerControllersState();
-            }
+            Task.Factory.StartNew(() =>
+            {
+                String result = clientController.associateWithServer();
 
+                descriptionBox.Text += result;
+
+                if (result.Contains("Associated"))
+                {
+                    isConnectedToServer = true;
+                    changeServerControllersState();
+                    progressBar.Visible = false;
+                    connectButton.Enabled = false;
+                }
+
+            });
         }
 
         private void pushButton_Click(object sender, EventArgs e)
