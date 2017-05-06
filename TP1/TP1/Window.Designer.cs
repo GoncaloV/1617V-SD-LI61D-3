@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.studentBox = new System.Windows.Forms.ComboBox();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // descriptionBox
@@ -120,11 +121,22 @@
             this.studentBox.Size = new System.Drawing.Size(695, 33);
             this.studentBox.TabIndex = 9;
             // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(931, 92);
+            this.progressBar.MarqueeAnimationSpeed = 20;
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(222, 30);
+            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.progressBar.TabIndex = 10;
+            this.progressBar.Visible = false;
+            // 
             // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1165, 514);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.studentBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -152,5 +164,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox studentBox;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }

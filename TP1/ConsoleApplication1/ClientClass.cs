@@ -8,6 +8,7 @@ using System.Text;
 using System.Runtime.Serialization;
 using System.Linq;
 using System.Configuration;
+using System.Threading.Tasks;
 
 namespace ClientClass
 {

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TP1
@@ -20,7 +21,7 @@ namespace TP1
             InitializeComponent();
             clientController = new ClientClassImpl();
             initComboBox();
-            //changeServerControllersState();    
+            changeServerControllersState();    
         }
 
         private void initComboBox()
@@ -39,15 +40,23 @@ namespace TP1
 
         private void connectButton_Click(object sender, EventArgs e)
         {
-            String result = clientController.associateWithServer();
 
-            descriptionBox.Text += result;
+            progressBar.Visible = true;
 
-            if (result.Contains("Associated")) { 
-                isConnectedToServer = true;
-                changeServerControllersState();
-            }
+            Task.Factory.StartNew(() =>
+            {
+                String result = clientController.associateWithServer();
 
+                descriptionBox.Text += result;
+
+                if (result.Contains("Associated"))
+                {
+                    isConnectedToServer = true;
+                    changeServerControllersState();
+                    progressBar.Visible = false;
+                    connectButton.Enabled = false;
+                }
+            });
         }
 
         private void pushButton_Click(object sender, EventArgs e)
@@ -62,8 +71,10 @@ namespace TP1
 
             int student = studentBox.SelectedIndex;
 
-            descriptionBox.Text += (student != -1) ? clientController.storePairOnServer(key, student) : "Select a student first\n";
-
+            Task.Factory.StartNew(() =>
+            {
+                descriptionBox.Text += (student != -1) ? clientController.storePairOnServer(key, student) : "Select a student first\n";
+            });
         }
 
         private void pullButton_Click(object sender, EventArgs e)
@@ -76,7 +87,10 @@ namespace TP1
                 return;
             }
 
-            descriptionBox.Text += clientController.readPairFromServer(key);
+            Task.Factory.StartNew(() =>
+            {
+                descriptionBox.Text += clientController.readPairFromServer(key);
+            });
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -89,7 +103,10 @@ namespace TP1
                 return;
             }
 
-            descriptionBox.Text += clientController.deletePairFromServer(key);
+            Task.Factory.StartNew(() =>
+            {
+                descriptionBox.Text += clientController.deletePairFromServer(key);
+            });
 
         }
     }

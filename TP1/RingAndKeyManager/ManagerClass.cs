@@ -79,12 +79,12 @@ namespace ManagerClass
             throw new NotImplementedException();
         }
 
-        public SerializableAttribute searchServersForObject(string key)
+        public void deleteInformation(string key, int id)
         {
             throw new NotImplementedException();
         }
 
-        public void deleteInformation(string key, int id)
+        public string searchServersForObject(string key)
         {
             throw new NotImplementedException();
         }

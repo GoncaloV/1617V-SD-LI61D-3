@@ -59,6 +59,7 @@ namespace ServerClass
             ring = (IManagerServerSide)Activator.GetObject(entry.ObjectType, entry.ObjectUrl);
 
             id = serverID;
+            map = new Dictionary<string, string>();
         }
 
         /**

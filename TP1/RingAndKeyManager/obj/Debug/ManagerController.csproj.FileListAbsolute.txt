@@ -6,3 +6,10 @@ C:\Users\André Carvalho\Desktop\SD\TP1\RingAndKeyManager\bin\Debug\Interfaces.d
 C:\Users\André Carvalho\Desktop\SD\TP1\RingAndKeyManager\obj\Debug\ManagerController.csprojResolveAssemblyReference.cache
 C:\Users\André Carvalho\Desktop\SD\TP1\RingAndKeyManager\obj\Debug\ManagerController.dll
 C:\Users\André Carvalho\Desktop\SD\TP1\RingAndKeyManager\obj\Debug\ManagerController.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\RingAndKeyManager\obj\Debug\ManagerController.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\RingAndKeyManager\obj\Debug\ManagerController.dll
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\RingAndKeyManager\obj\Debug\ManagerController.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\RingAndKeyManager\bin\Debug\ManagerController.dll
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\RingAndKeyManager\bin\Debug\ManagerController.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\RingAndKeyManager\bin\Debug\Interfaces.dll
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\RingAndKeyManager\bin\Debug\Interfaces.pdb
