@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Remoting;
+using System.Threading.Tasks;
 
 namespace ServerClass
 {
@@ -15,11 +16,37 @@ namespace ServerClass
             Console.WriteLine("ServerClass construtor");
         }
 
-        public int deletePair(String key)
+        /**
+         * Deletes an entry from the dictionary according to the key provided. Asks the ring to do the same for every server.
+         * */
+        public void deletePair(String key)
         {
-            throw new NotImplementedException();
+            Task.Factory.StartNew(() =>
+            {
+                try
+                {
+                    map.Remove(key);
+                    ring.deleteInformation(key, id);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+            });
         }
 
+        /**
+         * Deletes an entry from the dictionary according to the key provided, but only locally.
+         * Should only be called by the Ring while processing another server's deletePair.
+         * */
+        public void deletePairLocally(String key)
+        {
+            map.Remove(key);
+        }
+
+        /**
+         * Initializes server and acquires an id.
+         * */
         public void init(int serverID)
         {
             
@@ -34,14 +61,47 @@ namespace ServerClass
             id = serverID;
         }
 
+        /**
+         * Reads a pair locally. If the pair is not available locally it asks the ring to get it remotely.
+         * */
         public String readPair(String key)
         {
-            throw new NotImplementedException();
+            if (map.ContainsKey(key))
+            {
+                String value;
+                if (map.TryGetValue(key, out value))
+                {
+                    return value;
+                }
+                else if ((value = ring.searchServersForObject(key)) != null)
+                    return value;
+                return null;
+            }
+            return null;
         }
 
-        public int storePair(String key, String value)
+        /**
+         * Stores a pair locally and replicates it across two other servers.
+         * */
+        public void storePair(String key, String value)
         {
-            throw new NotImplementedException();
+            Task.Factory.StartNew(() =>
+            {
+                try
+                {
+                    if (!map.ContainsKey(key) && !ring.checkIfKeyExists(key, id))
+                    {
+                        map.Add(key, value);
+                        if (!ring.ReplicateInformationBetweenServers(id, key, value))
+                            throw new Exception("Failed to replicate.");
+                    }
+                    else throw new Exception("Key does not exist.");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+            });
         }
     }
 }

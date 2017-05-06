@@ -10,14 +10,14 @@ namespace ManagerClass
     public class ManagerClassImpl : MarshalByRefObject, IManagerServerSide, IManagerClientSide
     {
         LinkedList<IServer> servers;
-        LinkedList<String> keys;
+        LinkedList<KeyWrapper> keys;
         LinkedList<String> serverURLS;
 
         public ManagerClassImpl()
         {
             Console.WriteLine("ManagerClass construtor");
             servers = new LinkedList<IServer>();
-            keys = new LinkedList<String>();
+            keys = new LinkedList<KeyWrapper>();
             serverURLS = new LinkedList<String>();
 
             initRing();
@@ -82,6 +82,50 @@ namespace ManagerClass
         public SerializableAttribute searchServersForObject(string key)
         {
             throw new NotImplementedException();
+        }
+
+        public void deleteInformation(string key, int id)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    internal class KeyWrapper
+    {
+        private String key;
+        private LinkedList<int> servers;
+        public KeyWrapper(String key, int id)
+        {
+            this.key = key;
+            this.servers = new LinkedList<int>();
+            servers.AddLast(id);
+        }
+        public Boolean addServerToKey(int id)
+        {
+            if (servers.Contains(id))
+                return false;
+            else
+            {
+                servers.AddLast(id);
+                return true;
+            }
+        }
+        public Boolean removeServerFromKey(int id)
+        {
+            if (servers.Contains(id))
+            {
+                servers.Remove(id);
+                return true;
+            }
+            return false;
+        }
+        public String getKey()
+        {
+            return key;
+        }
+        public LinkedList<int> getServers()
+        {
+            return servers;
         }
     }
 }

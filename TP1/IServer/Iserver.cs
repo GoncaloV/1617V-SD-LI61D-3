@@ -5,17 +5,18 @@ namespace Interface
 {
     public interface IServer
     {
-        int storePair(String key, String value);
+        void storePair(String key, String value);
         String readPair(String key);
-        int deletePair(String key);
+        void deletePair(String key);
         void init(int serverID);
     }
 
     public interface IManagerServerSide
     {
         Boolean checkIfKeyExists(String key, int originServer);
-        SerializableAttribute searchServersForObject(String key);
+        String searchServersForObject(String key);
         Boolean ReplicateInformationBetweenServers(int id, String Key, String val);
+        void deleteInformation(String key, int id);
     }
 
     public interface IManagerClientSide
