@@ -84,7 +84,25 @@ namespace ManagerClass
 
         public bool ReplicateInformationBetweenServers(int id, string Key, String val)
         {
-            throw new NotImplementedException();
+            if(id > servers.Count)
+                return false;
+            int repId = servers.Count - id;
+            if (repId == 1)
+            {
+                servers.ElementAt(id + 1).storePairLocally(Key, val);
+                servers.ElementAt(0).storePairLocally(Key, val);
+                return true;
+            }
+            if (repId == 0)
+            {
+                servers.ElementAt(0).storePairLocally(Key, val);
+                servers.ElementAt(1).storePair(Key, val);
+                return true;
+            }
+            servers.ElementAt(id + 1).storePairLocally(Key, val);
+            servers.ElementAt(id + 2).storePairLocally(Key, val);
+            return true;
+            
         }
 
         public void deleteInformation(string key, int id)
@@ -98,7 +116,15 @@ namespace ManagerClass
 
         public string searchServersForObject(string key)
         {
-            throw new NotImplementedException();
+            foreach (KeyWrapper keyW in keys)
+            {
+                if (keyW.getKey().Equals(key))
+                {
+                    return servers.ElementAt(keyW.getServers().ElementAt(0)).readPair(key);
+                }
+                return null;
+            }
+            return null;
         }
     }
 

@@ -6,7 +6,9 @@ namespace Interface
     public interface IServer
     {
         void storePair(String key, String value);
+        void storePairLocally(String key, String value);
         String readPair(String key);
+        String readPairLocally(String key);
         void deletePair(String key);
         void init(int serverID);
     }
