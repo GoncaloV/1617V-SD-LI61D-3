@@ -26,3 +26,17 @@ C:\Users\André Carvalho\Desktop\SD\TP1\Server\bin\Debug\ServerController.pdb
 C:\Users\André Carvalho\Desktop\SD\TP1\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
 C:\Users\André Carvalho\Desktop\SD\TP1\Server\obj\Debug\Server.exe
 C:\Users\André Carvalho\Desktop\SD\TP1\Server\obj\Debug\Server.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Server\bin\Debug\Server3.config
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Server\bin\Debug\Server5.config
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Server\bin\Debug\Server4.config
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Server\bin\Debug\Server2.config
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Server\bin\Debug\Server1.config
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Server\bin\Debug\Server.exe
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Server\bin\Debug\Server.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Server\bin\Debug\Interfaces.dll
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Server\bin\Debug\ServerController.dll
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Server\bin\Debug\Interfaces.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Server\bin\Debug\ServerController.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Server\obj\Debug\Server.exe
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Server\obj\Debug\Server.pdb

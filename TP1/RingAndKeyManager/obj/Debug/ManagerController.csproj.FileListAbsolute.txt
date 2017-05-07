@@ -12,3 +12,10 @@ C:\Users\André Carvalho\Desktop\SD\TP1\RingAndKeyManager\bin\Debug\Interfaces.p
 C:\Users\André Carvalho\Desktop\SD\TP1\RingAndKeyManager\obj\Debug\ManagerController.csprojResolveAssemblyReference.cache
 C:\Users\André Carvalho\Desktop\SD\TP1\RingAndKeyManager\obj\Debug\ManagerController.dll
 C:\Users\André Carvalho\Desktop\SD\TP1\RingAndKeyManager\obj\Debug\ManagerController.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\RingAndKeyManager\bin\Debug\ManagerController.dll
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\RingAndKeyManager\bin\Debug\ManagerController.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\RingAndKeyManager\bin\Debug\Interfaces.dll
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\RingAndKeyManager\bin\Debug\Interfaces.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\RingAndKeyManager\obj\Debug\ManagerController.csprojResolveAssemblyReference.cache
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\RingAndKeyManager\obj\Debug\ManagerController.dll
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\RingAndKeyManager\obj\Debug\ManagerController.pdb

@@ -18,3 +18,13 @@ C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\ManagerController.pdb
 C:\Users\André Carvalho\Desktop\SD\TP1\Ring\obj\Debug\Ring.csprojResolveAssemblyReference.cache
 C:\Users\André Carvalho\Desktop\SD\TP1\Ring\obj\Debug\Ring.exe
 C:\Users\André Carvalho\Desktop\SD\TP1\Ring\obj\Debug\Ring.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Ring\bin\Debug\Ring.exe.config
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Ring\obj\Debug\Ring.exe
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Ring\obj\Debug\Ring.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Ring\bin\Debug\Ring.exe
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Ring\bin\Debug\Ring.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Ring\bin\Debug\Interfaces.dll
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Ring\bin\Debug\ManagerController.dll
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Ring\bin\Debug\Interfaces.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Ring\bin\Debug\ManagerController.pdb
+C:\Users\RUBANECO\Documents\ISEL\SD\1617V-SD-LI61D-3\TP1\Ring\obj\Debug\Ring.csprojResolveAssemblyReference.cache

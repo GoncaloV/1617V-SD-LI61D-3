@@ -85,40 +85,35 @@ namespace ManagerClass
         {
             if(id > servers.Count)
                 return false;
-
-
-            int firstServer = (id+ 1) % servers.Count;
-            int secondServer = (id + 2) % servers.Count;
+            
+            int count = 0;
+            LinkedList<int> tmp = new LinkedList<int>();
+            tmp.AddLast(id);
+            int tmpId = id;
+            int tmpServer = (tmpId+ 1) % servers.Count;
+            
 
 
             //Console.WriteLine("id " + id  + " f " + firstServer + " secon " + secondServer);
-
-            try
+            while (count < 2)
             {
-
-                Console.WriteLine("Replicating between server " + firstServer + " and " + secondServer);
-                servers.ElementAt(firstServer).storePairLocally(Key, val);
-                servers.ElementAt(secondServer).storePairLocally(Key, val);
-
-                addToKeyMap(id, firstServer, secondServer, Key);
-
-                return true;
+                try
+                {
+                    servers.ElementAt(tmpServer).storePairLocally(Key, val);
+                    tmp.AddLast(tmpServer);
+                    tmpId++;
+                    count++;
+                    tmpServer = (tmpId + 1) % servers.Count;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    if(tmpId == servers.Count)
+                        return false;
+                }            
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                return false;
-            }            
-        }
-
-        private void addToKeyMap(int id, int firstServer, int secondServer, string key)
-        {
-            LinkedList<int> tmp = new LinkedList<int>();
-            tmp.AddLast(id);
-            tmp.AddLast(firstServer);
-            tmp.AddLast(secondServer);
-
-            keys.AddLast(new KeyWrapper(key, tmp));
+            keys.AddLast(new KeyWrapper(Key, tmp));
+            return true;
         }
 
         public void deleteInformation(string key, int id)
