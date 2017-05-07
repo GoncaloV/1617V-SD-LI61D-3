@@ -71,20 +71,11 @@ namespace ServerClass
          * */
         public String readPair(String key)
         {
-
             Console.WriteLine("Attempting to read key: " + key);
-            if (map.ContainsKey(key))
-            {
-                String value;
-                if (map.TryGetValue(key, out value))
-                {
-                    return value;
-                }
-                else if ((value = ring.searchServersForObject(key)) != null)
-                    return value;
-                return null;
-            }
-            return null;
+            String value;
+            if (map.TryGetValue(key, out value))
+                return value;
+            return ring.searchServersForObject(key);
         }
 
         /**
@@ -93,18 +84,10 @@ namespace ServerClass
          * */
         public String readPairLocally(String key)
         {
-
             Console.WriteLine("Attempting to read local key: " + key);
-            if (map.ContainsKey(key))
-            {
-                String value;
-                if (map.TryGetValue(key, out value))
-                {
-                    return value;
-                }
-                else return null;
-            }
-            return null;
+            String value = null;
+            map.TryGetValue(key, out value);
+            return value;
         }
         /**
          * Stores a pair locally and replicates it across two other servers.
