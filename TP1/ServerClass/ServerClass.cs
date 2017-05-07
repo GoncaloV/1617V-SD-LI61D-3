@@ -25,6 +25,7 @@ namespace ServerClass
             {
                 try
                 {
+                    Console.WriteLine("Attempting to delete: " + key + " from the Ring");
                     map.Remove(key);
                     ring.deleteInformation(key, id);
                 }
@@ -41,6 +42,7 @@ namespace ServerClass
          * */
         public void deletePairLocally(String key)
         {
+            Console.WriteLine("Deleting " + key + " from Server");
             map.Remove(key);
         }
 
@@ -49,7 +51,9 @@ namespace ServerClass
          * */
         public void init(int serverID)
         {
-            
+
+            Console.WriteLine("Initializing Server with ID: " + serverID);
+
             WellKnownClientTypeEntry[] entries = RemotingConfiguration.GetRegisteredWellKnownClientTypes();
             WellKnownClientTypeEntry entry = entries[0];
 
@@ -67,6 +71,8 @@ namespace ServerClass
          * */
         public String readPair(String key)
         {
+
+            Console.WriteLine("Attempting to read key: " + key);
             if (map.ContainsKey(key))
             {
                 String value;
@@ -87,6 +93,8 @@ namespace ServerClass
          * */
         public String readPairLocally(String key)
         {
+
+            Console.WriteLine("Attempting to read local key: " + key);
             if (map.ContainsKey(key))
             {
                 String value;
@@ -107,6 +115,8 @@ namespace ServerClass
             {
                 try
                 {
+
+                    Console.WriteLine("Attempting to store key: " + key + " value: " + value);
                     if (!map.ContainsKey(key) && !ring.checkIfKeyExists(key, id))
                     {
                         map.Add(key, value);
@@ -132,11 +142,11 @@ namespace ServerClass
             {
                 try
                 {
+                    Console.WriteLine("Attempting to store local key: " + key + " value: " + value);
                     if (!map.ContainsKey(key) && !ring.checkIfKeyExists(key, id))
                     {
                         map.Add(key, value);
-                        if (!ring.ReplicateInformationBetweenServers(id, key, value))
-                            throw new Exception("Failed to replicate.");
+
                     }
                     else throw new Exception("Key does not exist.");
                 }

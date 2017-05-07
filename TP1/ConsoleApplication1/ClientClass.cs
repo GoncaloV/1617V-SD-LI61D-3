@@ -72,7 +72,7 @@ namespace ClientClass
 
             ringManager = (IManagerClientSide)Activator.GetObject(entry.ObjectType, entry.ObjectUrl);
 
-            return "Connected!";
+            return "Connected!\n";
         }
 
         public String associateWithServer()
@@ -88,10 +88,10 @@ namespace ClientClass
 
                 associatedServer = (IServer)Activator.GetObject(entry.ObjectType, url);
 
-                return "Associated with server: " + url;
+                return "Associated with server: " + url + "\n";
             }catch(Exception e)
             {
-                return "Cannot connect to Ring";
+                return "Cannot connect to Ring\n";
             }
         }
 
@@ -100,10 +100,11 @@ namespace ClientClass
             try
             {
                 associatedServer.deletePair(key);
-                return "Deleted value for key: " + key;
-            }catch(Exception e)
+                return "Deleted value for key: " + key + "\n";
+            }
+            catch(Exception e)
             {
-                return "Cannot communicate with Server";
+                return "Cannot communicate with Server\n";
             }
         }
 
@@ -111,17 +112,16 @@ namespace ClientClass
         {
             try
             {
-                return "Value for key: " + key + " is " + associatedServer.readPair(key);
+                return "Value for key: " + key + " is " + associatedServer.readPair(key) + "\n";
             }
             catch (Exception e)
             {
-                return "Cannot communicate with Server";
+                return "Cannot communicate with Server\n";
             }
         }
 
         public String storePairOnServer(String key, int student)
         {
-            return student + "";
 
             try
             {
@@ -130,10 +130,10 @@ namespace ClientClass
 
                 associatedServer.storePair(key, deserializedStudent);
 
-                return "Pushed " + key + " to Server";
+                return "Pushed " + key + " to Server\n";
             }catch(Exception e)
             {
-                return "Cannot communicate with Server";
+                return "Cannot communicate with Server\n";
             }
         }
 

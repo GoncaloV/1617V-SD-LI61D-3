@@ -10,6 +10,7 @@ namespace Interface
         String readPair(String key);
         String readPairLocally(String key);
         void deletePair(String key);
+        void deletePairLocally(String key);
         void init(int serverID);
     }
 

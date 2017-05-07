@@ -1,11 +1,3 @@
-C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\obj\Debug\ClientController.csprojResolveAssemblyReference.cache
-C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\ClientController.dll
-C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\ClientController.pdb
-C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\Interfaces.dll
-C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\Interfaces.pdb
-C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\Interfaces.dll.config
-C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\obj\Debug\ClientController.dll
-C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\obj\Debug\ClientController.pdb
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ConsoleApplication1\bin\Debug\ClientController.dll
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ConsoleApplication1\bin\Debug\ClientController.pdb
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ConsoleApplication1\bin\Debug\Interfaces.dll
@@ -13,3 +5,10 @@ C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ConsoleApplicati
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ConsoleApplication1\obj\Debug\ClientController.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ConsoleApplication1\obj\Debug\ClientController.dll
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ConsoleApplication1\obj\Debug\ClientController.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\ClientController.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\ClientController.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\Interfaces.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\bin\Debug\Interfaces.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\obj\Debug\ClientController.csprojResolveAssemblyReference.cache
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\obj\Debug\ClientController.dll
+C:\Users\André Carvalho\Desktop\SD\TP1\ConsoleApplication1\obj\Debug\ClientController.pdb

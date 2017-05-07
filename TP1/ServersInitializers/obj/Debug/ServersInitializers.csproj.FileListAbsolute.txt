@@ -1,16 +1,3 @@
-C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\Server3.config
-C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\Server5.config
-C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\Server4.config
-C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\Server2.config
-C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\Server1.config
-C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\ServersInitializers.exe.config
-C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\ServersInitializers.exe
-C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\ServersInitializers.pdb
-C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\Server.exe
-C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\Server.pdb
-C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\obj\Debug\ServersInitializers.csprojResolveAssemblyReference.cache
-C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\obj\Debug\ServersInitializers.exe
-C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\obj\Debug\ServersInitializers.pdb
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ServersInitializers\bin\Debug\ServersInitializers.exe.config
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ServersInitializers\obj\Debug\ServersInitializers.exe
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ServersInitializers\obj\Debug\ServersInitializers.pdb
@@ -24,3 +11,16 @@ C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ServersInitializ
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ServersInitializers\bin\Debug\Server.exe
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ServersInitializers\bin\Debug\Server.pdb
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\ServersInitializers\obj\Debug\ServersInitializers.csprojResolveAssemblyReference.cache
+C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\Server3.config
+C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\Server5.config
+C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\Server4.config
+C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\Server2.config
+C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\Server1.config
+C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\ServersInitializers.exe.config
+C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\ServersInitializers.exe
+C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\ServersInitializers.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\Server.exe
+C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\bin\Debug\Server.pdb
+C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\obj\Debug\ServersInitializers.csprojResolveAssemblyReference.cache
+C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\obj\Debug\ServersInitializers.exe
+C:\Users\André Carvalho\Desktop\SD\TP1\ServersInitializers\obj\Debug\ServersInitializers.pdb

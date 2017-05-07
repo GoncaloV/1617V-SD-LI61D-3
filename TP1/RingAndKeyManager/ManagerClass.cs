@@ -43,7 +43,7 @@ namespace ManagerClass
                 //Init connection on the server with the Ring
                 try
                 {
-                    servers.Last().init(servers.Count());
+                    servers.Last().init(servers.Count() -1);
                 }catch(Exception e)
                 {
                     //If we cannot connect to the server we assume that isn´t a valid server, so we remove it from our list
@@ -58,13 +58,13 @@ namespace ManagerClass
 
         public bool checkIfKeyExists(string key, int originServer)
         {
+            Console.WriteLine("Checking if key: " + key + " exist");
             foreach (KeyWrapper keyW in keys)
             {
-                if (keyW.getKey().Equals(key) && keyW.getServers().Contains(originServer))
+                if (key.Equals(keyW.getKey()))
                 {
                     return true;
                 }
-                return false;
             }
             return false;
         }
@@ -76,53 +76,81 @@ namespace ManagerClass
             Random r = new Random();
             int server = r.Next(servers.Count);
 
-            Console.WriteLine("Returned server number " + server);
+            Console.WriteLine("Returned server number " + server +1);
 
             return serverURLS.ElementAt(server);
         }
-
 
         public bool ReplicateInformationBetweenServers(int id, string Key, String val)
         {
             if(id > servers.Count)
                 return false;
+
             int repId = servers.Count - id;
-            if (repId == 1)
+
+            try
             {
+                if (repId == 1)
+                {
+                    Console.WriteLine("Replicating between server " + (id + 1) + " and 0");
+                    servers.ElementAt(id + 1).storePairLocally(Key, val);
+                    servers.ElementAt(0).storePairLocally(Key, val);
+                    return true;
+                }
+                if (repId == 0)
+                {
+
+                    Console.WriteLine("Replicating between server 0 and 1");
+                    servers.ElementAt(0).storePairLocally(Key, val);
+                    servers.ElementAt(1).storePair(Key, val);
+                    return true;
+                }
+
+                Console.WriteLine("Replicating between server " + (id + 1) + " and " + (id + 2));
                 servers.ElementAt(id + 1).storePairLocally(Key, val);
-                servers.ElementAt(0).storePairLocally(Key, val);
+                servers.ElementAt(id + 2).storePairLocally(Key, val);
+
                 return true;
             }
-            if (repId == 0)
+            catch (Exception e)
             {
-                servers.ElementAt(0).storePairLocally(Key, val);
-                servers.ElementAt(1).storePair(Key, val);
-                return true;
-            }
-            servers.ElementAt(id + 1).storePairLocally(Key, val);
-            servers.ElementAt(id + 2).storePairLocally(Key, val);
-            return true;
-            
+                Console.WriteLine(e);
+                return false;
+            }            
         }
 
         public void deleteInformation(string key, int id)
         {
+            Console.WriteLine("Attempting to delete information of key: " + key);
             foreach (KeyWrapper keyW in keys)
             {
-                if (keyW.getKey().Equals(key))
+                if (key.Equals(keyW.getKey())) { 
                     keyW.removeServerFromKey(id);
+                    try {
+                        servers.ElementAt(id).deletePairLocally(key);
+                    }catch(Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }
+                }
             }
         }
 
         public string searchServersForObject(string key)
         {
+            Console.WriteLine("Searching for key: " + key);
             foreach (KeyWrapper keyW in keys)
             {
                 if (keyW.getKey().Equals(key))
                 {
-                    return servers.ElementAt(keyW.getServers().ElementAt(0)).readPair(key);
+                    try
+                    {
+                        return servers.ElementAt(keyW.getServers().ElementAt(0)).readPair(key);
+                    }catch(Exception e)
+                    {
+                        Console.WriteLine(e);
+                    }
                 }
-                return null;
             }
             return null;
         }
@@ -153,6 +181,7 @@ namespace ManagerClass
             if (servers.Contains(id))
             {
                 servers.Remove(id);
+
                 return true;
             }
             return false;

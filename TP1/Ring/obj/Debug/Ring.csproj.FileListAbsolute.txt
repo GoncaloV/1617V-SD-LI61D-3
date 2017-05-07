@@ -6,16 +6,15 @@ C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\Ring\bin\Debug\I
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\Ring\obj\Debug\Ring.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\Ring\obj\Debug\Ring.exe
 C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\Ring\obj\Debug\Ring.pdb
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\Ring\bin\Debug\ManagerController.dll
+C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\Ring\bin\Debug\ManagerController.pdb
 C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\Ring.exe.config
 C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\Ring.exe
 C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\Ring.pdb
 C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\Interfaces.dll
 C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\ManagerController.dll
 C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\Interfaces.pdb
-C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\Interfaces.dll.config
 C:\Users\André Carvalho\Desktop\SD\TP1\Ring\bin\Debug\ManagerController.pdb
 C:\Users\André Carvalho\Desktop\SD\TP1\Ring\obj\Debug\Ring.csprojResolveAssemblyReference.cache
 C:\Users\André Carvalho\Desktop\SD\TP1\Ring\obj\Debug\Ring.exe
 C:\Users\André Carvalho\Desktop\SD\TP1\Ring\obj\Debug\Ring.pdb
-C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\Ring\bin\Debug\ManagerController.dll
-C:\Users\user\Documents\2017V\SD\Projectos\1617V-SD-LI61D-3\TP1\Ring\bin\Debug\ManagerController.pdb
