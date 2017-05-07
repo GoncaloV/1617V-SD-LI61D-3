@@ -87,12 +87,11 @@ namespace ManagerClass
                 return false;
 
 
-            int repId = servers.Count - (id + 1);
-            int firstServer = (repId + 1) % servers.Count;
-            int secondServer = (repId + 2) % servers.Count;
+            int firstServer = (id+ 1) % servers.Count;
+            int secondServer = (id + 2) % servers.Count;
 
 
-            Console.WriteLine("id " + id + " repID " + repId + "f " + firstServer + " secon " + secondServer);
+            //Console.WriteLine("id " + id  + " f " + firstServer + " secon " + secondServer);
 
             try
             {
