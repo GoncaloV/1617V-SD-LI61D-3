@@ -86,29 +86,22 @@ namespace ManagerClass
             if(id > servers.Count)
                 return false;
 
-            int repId = servers.Count - id;
+
+            int repId = servers.Count - (id + 1);
+            int firstServer = (repId + 1) % servers.Count;
+            int secondServer = (repId + 2) % servers.Count;
+
+
+            Console.WriteLine("id " + id + " repID " + repId + "f " + firstServer + " secon " + secondServer);
 
             try
             {
-                if (repId == 1)
-                {
-                    Console.WriteLine("Replicating between server " + (id + 1) + " and 0");
-                    servers.ElementAt(id + 1).storePairLocally(Key, val);
-                    servers.ElementAt(0).storePairLocally(Key, val);
-                    return true;
-                }
-                if (repId == 0)
-                {
 
-                    Console.WriteLine("Replicating between server 0 and 1");
-                    servers.ElementAt(0).storePairLocally(Key, val);
-                    servers.ElementAt(1).storePair(Key, val);
-                    return true;
-                }
+                Console.WriteLine("Replicating between server " + firstServer + " and " + secondServer);
+                servers.ElementAt(firstServer).storePairLocally(Key, val);
+                servers.ElementAt(secondServer).storePairLocally(Key, val);
 
-                Console.WriteLine("Replicating between server " + (id + 1) + " and " + (id + 2));
-                servers.ElementAt(id + 1).storePairLocally(Key, val);
-                servers.ElementAt(id + 2).storePairLocally(Key, val);
+                addToKeyMap(id, firstServer, secondServer, Key);
 
                 return true;
             }
@@ -119,21 +112,39 @@ namespace ManagerClass
             }            
         }
 
+        private void addToKeyMap(int id, int firstServer, int secondServer, string key)
+        {
+            LinkedList<int> tmp = new LinkedList<int>();
+            tmp.AddLast(id);
+            tmp.AddLast(firstServer);
+            tmp.AddLast(secondServer);
+
+            keys.AddLast(new KeyWrapper(key, tmp));
+        }
+
         public void deleteInformation(string key, int id)
         {
             Console.WriteLine("Attempting to delete information of key: " + key);
+            KeyWrapper toRemove = null;
+
             foreach (KeyWrapper keyW in keys)
             {
-                if (key.Equals(keyW.getKey())) { 
-                    keyW.removeServerFromKey(id);
+                if (key.Equals(keyW.getKey())) {
+                    toRemove = keyW;
                     try {
-                        servers.ElementAt(id).deletePairLocally(key);
-                    }catch(Exception e)
+                        foreach(int serverID in keyW.getServers())
+                        {
+                            servers.ElementAt(serverID).deletePairLocally(key);
+                        }
+                    }
+                    catch(Exception e)
                     {
                         Console.WriteLine(e);
                     }
                 }
             }
+
+            keys.Remove(toRemove);
         }
 
         public string searchServersForObject(string key)
@@ -145,7 +156,12 @@ namespace ManagerClass
                 {
                     try
                     {
-                        return servers.ElementAt(keyW.getServers().ElementAt(0)).readPair(key);
+                        foreach(int serverID in keyW.getServers())
+                        {
+                            String value = servers.ElementAt(serverID).readPairLocally(key);
+                            if (value != null)
+                                return value;
+                        }
                     }catch(Exception e)
                     {
                         Console.WriteLine(e);
@@ -166,6 +182,12 @@ namespace ManagerClass
             this.servers = new LinkedList<int>();
             servers.AddLast(id);
         }
+        public KeyWrapper(String key, LinkedList<int> ids)
+        {
+            this.key = key;
+            this.servers = ids;
+        }
+
         public Boolean addServerToKey(int id)
         {
             if (servers.Contains(id))

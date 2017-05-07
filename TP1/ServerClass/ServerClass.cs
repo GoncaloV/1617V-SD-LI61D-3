@@ -12,7 +12,8 @@ namespace ServerClass
         private int id;
         private IManagerServerSide ring;
 
-        public ServerClassImpl() { 
+        public ServerClassImpl()
+        {
             Console.WriteLine("ServerClass construtor");
         }
 
@@ -71,20 +72,11 @@ namespace ServerClass
          * */
         public String readPair(String key)
         {
-
             Console.WriteLine("Attempting to read key: " + key);
-            if (map.ContainsKey(key))
-            {
-                String value;
-                if (map.TryGetValue(key, out value))
-                {
-                    return value;
-                }
-                else if ((value = ring.searchServersForObject(key)) != null)
-                    return value;
-                return null;
-            }
-            return null;
+            String value;
+            if (map.TryGetValue(key, out value))
+                return value;
+            return ring.searchServersForObject(key);
         }
 
         /**
@@ -93,18 +85,10 @@ namespace ServerClass
          * */
         public String readPairLocally(String key)
         {
-
             Console.WriteLine("Attempting to read local key: " + key);
-            if (map.ContainsKey(key))
-            {
-                String value;
-                if (map.TryGetValue(key, out value))
-                {
-                    return value;
-                }
-                else return null;
-            }
-            return null;
+            String value = null;
+            map.TryGetValue(key, out value);
+            return value;
         }
         /**
          * Stores a pair locally and replicates it across two other servers.
@@ -138,23 +122,10 @@ namespace ServerClass
          * */
         public void storePairLocally(String key, String value)
         {
-            Task.Factory.StartNew(() =>
-            {
-                try
-                {
-                    Console.WriteLine("Attempting to store local key: " + key + " value: " + value);
-                    if (!map.ContainsKey(key) && !ring.checkIfKeyExists(key, id))
-                    {
-                        map.Add(key, value);
 
-                    }
-                    else throw new Exception("Key does not exist.");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                }
-            });
+            Console.WriteLine("Attempting to store local key: " + key + " value: " + value);
+            map.Add(key, value);
+            
         }
     }
 }
