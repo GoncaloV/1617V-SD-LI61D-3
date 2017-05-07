@@ -76,7 +76,7 @@ namespace ManagerClass
             Random r = new Random();
             int server = r.Next(servers.Count);
 
-            Console.WriteLine("Returned server number " + server +1);
+            Console.WriteLine("Returned server number " + server);
 
             return serverURLS.ElementAt(server);
         }
