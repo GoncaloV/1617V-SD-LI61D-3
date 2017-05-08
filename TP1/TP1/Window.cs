@@ -54,7 +54,7 @@ namespace TP1
                     isConnectedToServer = true;
                     changeServerControllersState();
                     progressBar.Visible = false;
-                    connectButton.Enabled = false;
+                    //connectButton.Enabled = false;
                 }
             });
         }

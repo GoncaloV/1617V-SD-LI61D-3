@@ -89,8 +89,8 @@ namespace ManagerClass
             int count = 0;
             LinkedList<int> tmp = new LinkedList<int>();
             tmp.AddLast(id);
-            int tmpId = id;
-            int tmpServer = (tmpId+ 1) % servers.Count;
+
+            int tmpServer = (id+ 1) % servers.Count;
             
 
 
@@ -101,16 +101,14 @@ namespace ManagerClass
                 {
                     servers.ElementAt(tmpServer).storePairLocally(Key, val);
                     tmp.AddLast(tmpServer);
-                    tmpId++;
                     count++;
-                    tmpServer = (tmpId + 1) % servers.Count;
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e);
-                    if(tmpId == servers.Count)
+                    if(tmpServer == id)
                         return false;
-                }            
+                }
+                tmpServer = (tmpServer + 1) % servers.Count;
             }
             keys.AddLast(new KeyWrapper(Key, tmp));
             return true;
