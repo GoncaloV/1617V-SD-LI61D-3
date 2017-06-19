@@ -13,10 +13,10 @@ namespace TP3
 {
     public partial class Login : Form
     {
-        private readonly Func<string, string, bool> connectFunction;
+        private readonly Action<string, string> connectFunction;
         private IList<Language> supportedLanguages;
 
-        public Login(Func<string, string, bool> connectFunction)
+        public Login(Action<string, string> connectFunction)
         {
             InitializeComponent();
             this.connectFunction = connectFunction;
