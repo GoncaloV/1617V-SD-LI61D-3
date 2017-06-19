@@ -3,15 +3,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using TP3.com.microsofttranslator.api;
+using Interfaces;
+
 namespace TP3
 {
-    public partial class Main : Form
+    public partial class Main : Form, IReceiver
     {
-        //User settings
-        private string username;
-        private string user_language;
-
-
+        //Represents the current user
+        private ChatUser user = new ChatUser();
 
         //Microsoft Service
         private readonly string API_KEY = ConfigurationManager.AppSettings["Microsoft_Key"];
@@ -21,11 +20,24 @@ namespace TP3
         {
             InitializeComponent();
 
+            //@TODO: Define the user URI in the app.config file.
+            user.URI = ConfigurationManager.AppSettings["Microsoft_Key"];
+            
             //Disable by default because we arent connected
             changeControllersState(false);
         }
 
-
+        
+        /// <summary>
+        /// Uses the Microsoft service to translate a message.
+        /// This method is async, which means that when you are going to call it you must call it like: await Translate(...);
+        /// Why not use the async method that the service provides? 
+        /// In my opinion the setup required, to do that is not worth it, and this gives a must better controller.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="fromLanguage"></param>
+        /// <param name="toLanguage"></param>
+        /// <returns>The translated message</returns>
         private async Task<String> Translate(string message, string fromLanguage, string toLanguage)
         {
             return await Task.Run(
@@ -50,14 +62,10 @@ namespace TP3
         /// </summary>
         /// <param name="username"></param>
         /// <param name="nativeLanguage"></param>
-        /// <returns></returns>
         private void handleConnect(String username, String nativeLanguage)
         {
-            Console.WriteLine("-------> User: " + username);
-            Console.WriteLine("-------> Language: " + nativeLanguage);
-
-            this.username = username;
-            this.user_language = nativeLanguage;
+            user.name = username;
+            user.language = nativeLanguage;
 
             //Handle login here!
 
@@ -66,13 +74,23 @@ namespace TP3
             changeControllersState(true);
         }
 
-
+        /// <summary>
+        /// Used to disable UI Controls
+        /// </summary>
+        /// <param name="setupDone">If the user has been connected to the server</param>
         private void changeControllersState(bool setupDone)
         {
             messageBox.Enabled = setupDone;
             logBox.Enabled = setupDone;
             sendMessage.Enabled = setupDone;
             ConnectButton.Enabled = !setupDone;
+        }
+
+
+        //Method is called when we receive a message
+        public void handleNewMessage(ChatMessage message)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -141,5 +141,11 @@
       <CachedSettingsPropName>TP3_com_microsofttranslator_api_SoapService</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{be900dc3-dce2-4199-96be-b2065ac259ac}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
