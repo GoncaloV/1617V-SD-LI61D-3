@@ -33,6 +33,30 @@ namespace TP3
             );
         }
 
-        
+        /// <summary>
+        /// Connect Button click Event
+        /// When clicked will launch a new form to handle the login
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ConnectButton_Click(object sender, EventArgs e)
+        {
+            new Login(handleConnect).Show();
+        }
+
+        /// <summary>
+        /// Handles the connection between the server and I.
+        /// Returns true/false indicating wether or not the connection was successful
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="nativeLanguage"></param>
+        /// <returns></returns>
+        private bool handleConnect(String username, String nativeLanguage)
+        {
+            Console.WriteLine("-------> User: " + username);
+            Console.WriteLine("-------> Language: " + nativeLanguage);
+
+            return false;
+        }
     }
 }
