@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Callbacks.cs" />
     <Compile Include="Connected Services\RegisterService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
