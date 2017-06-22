@@ -6,9 +6,15 @@ using TP3.com.microsofttranslator.api;
 using IReceiver = Interfaces.IReceiver;
 using Interfaces;
 using System.Security.Policy;
+using System.ServiceModel;
+using System.ServiceModel.Configuration;
+using TP3.RegisterService;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace TP3
 {
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public partial class Main : Form, IReceiver
     {
         //Represents the current user
@@ -18,9 +24,22 @@ namespace TP3
         private readonly SoapService MicrosoftTranslator = new SoapService();
         private readonly string API_KEY = ConfigurationManager.AppSettings["Microsoft_Key"];
 
+
+        //Ours
+        private string BINDING_NAME;
+        private readonly RegisterClient server;
+        private readonly Callbacks userCallbacks;
+        private ServiceHost host;
+
         public Main(string[] userConfig, bool selfInit)
         {
             InitializeComponent();
+
+            userCallbacks = new Callbacks();
+
+            server = new RegisterClient(new InstanceContext(userCallbacks));
+
+            getBinding();
 
             //@TODO: Define the user URI in the app.config file.
             user.URI = userConfig[userConfig.Length - 1];
@@ -73,11 +92,29 @@ namespace TP3
 
             //Handle login here!
 
+            //InitService;
+            host = new ServiceHost(this);
+            host.Open();
 
-            //Finally enable all actions
-            changeControllersState(true);
+            try
+            {
+                List<ChatUser> onlineUsers = server.Subscribe(user).ToList();
+                onlineUsers.ForEach(user => userCallbacks.NotifySubscribe(user));
 
-            logBox.Text += "Connected as: " + username + ", language: " + nativeLanguage + "\n";
+                //Finally enable all actions
+                changeControllersState(true);
+
+                logBox.Text += "Connected as: " + username + ", language: " + nativeLanguage + "\n";
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(@"Error!", @"ERROR",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
         }
 
         /// <summary>
@@ -93,10 +130,71 @@ namespace TP3
         }
 
 
+        private void getBinding()
+        {
+            ClientSection client = ConfigurationManager.GetSection("system.serviceModel/client") as ClientSection;
+            foreach (ChannelEndpointElement endpoint in client.Endpoints)
+            {
+                if (endpoint.Contract.Contains("IRegister"))
+                {
+                    BINDING_NAME = endpoint.BindingConfiguration;
+                    break;
+                }
+            }
+        }
+
         //Method is called when we receive a message
         public void handleNewMessage(ChatMessage message)
         {
-            throw new NotImplementedException();
+            String newMessage = message.message;
+
+            try
+            {
+                Task.Factory.StartNew(async () =>
+                {
+                    if (!message.language.Equals(user.language))
+                        newMessage = await Translate(message.message, message.language, user.language);
+
+                    logBox.Text += "Message from " + message.username + ": " + newMessage;
+                });
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(@"Service not responding....", @"Info",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void sendMessage_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Task.Factory.StartNew(() => {
+                    foreach (ChatUser u in userCallbacks.userList)
+                    {
+                        //ChatServiceClient cs = new ChatServiceClient(chatInfo.Binding, new EndpointAddress(chatInfo.Uri));
+
+                        ChatMessage msg = new ChatMessage();
+                        msg.language = user.language;
+                        msg.username = user.name;
+                        msg.message = messageBox.Text;
+
+                        try
+                        {
+                            //cs.ReceiveMessage(msg);
+                        }
+                        catch (EndpointNotFoundException)
+                        {
+                            userCallbacks.NotifyUnsubscribe(u);
+                        }
+                    }
+                });
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(@"Error Sending message", @"ERROR",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
