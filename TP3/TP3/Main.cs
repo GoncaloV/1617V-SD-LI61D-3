@@ -5,6 +5,7 @@ using System.Configuration;
 using TP3.com.microsofttranslator.api;
 using IReceiver = Interfaces.IReceiver;
 using Interfaces;
+using System.Security.Policy;
 
 namespace TP3
 {
@@ -13,38 +14,20 @@ namespace TP3
         //Represents the current user
         private ChatUser user = new ChatUser();
 
-        //Microsoft Service
-        private readonly string API_KEY = ConfigurationManager.AppSettings["Microsoft_Key"];
-        private readonly SoapService MicrosoftTranslator = new SoapService();
-
-        public Main()
+        public Main(string[] userConfig, bool selfInit)
         {
             InitializeComponent();
 
             //@TODO: Define the user URI in the app.config file.
-            user.URI = ConfigurationManager.AppSettings["Microsoft_Key"];
-            
+            user.URI = userConfig[userConfig.Length - 1];
+
             //Disable by default because we arent connected
             changeControllersState(false);
+
+            if (selfInit)
+                handleConnect(userConfig[0], userConfig[1]);
         }
 
-        
-        /// <summary>
-        /// Uses the Microsoft service to translate a message.
-        /// This method is async, which means that when you are going to call it you must call it like: await Translate(...);
-        /// Why not use the async method that the service provides? 
-        /// In my opinion the setup required, to do that is not worth it, and this gives a must better controller.
-        /// </summary>
-        /// <param name="message"></param>
-        /// <param name="fromLanguage"></param>
-        /// <param name="toLanguage"></param>
-        /// <returns>The translated message</returns>
-        private async Task<String> Translate(string message, string fromLanguage, string toLanguage)
-        {
-            return await Task.Run(
-                () => MicrosoftTranslator.Translate(API_KEY, message, fromLanguage, toLanguage, "text/html", "general", "")
-            );
-        }
 
         /// <summary>
         /// Connect Button click Event
@@ -73,6 +56,8 @@ namespace TP3
 
             //Finally enable all actions
             changeControllersState(true);
+
+            logBox.Text += "Connected as: " + username + ", language: " + nativeLanguage + "\n";
         }
 
         /// <summary>

@@ -44,6 +44,7 @@ namespace TP3
         /// </summary>
         private void getSupportedLanguages()
         {
+
             string languages = ConfigurationManager.AppSettings["Supported_Languages"];
             string[] tmp = languages.Split(';');
 
