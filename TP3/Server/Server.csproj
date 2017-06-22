@@ -53,44 +53,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Web References\com.microsofttranslator.api\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\com.microsofttranslator.api\GetTranslationsResponse.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\com.microsofttranslator.api\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\com.microsofttranslator.api\soap.wsdl" />
-    <None Include="Web References\com.microsofttranslator.api\soap.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Web References\com.microsofttranslator.api\soap0.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Web References\com.microsofttranslator.api\soap1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Web References\com.microsofttranslator.api\soap2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Web References\com.microsofttranslator.api\SoapService.wsdl" />
-    <None Include="Web References\com.microsofttranslator.api\TranslateArray2Response.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\com.microsofttranslator.api\TranslateArrayResponse.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -104,19 +72,6 @@
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WebReferenceUrl Include="http://api.microsofttranslator.com/V2/soap.svc">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\com.microsofttranslator.api\</RelPath>
-      <UpdateFromURL>http://api.microsofttranslator.com/V2/soap.svc</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>Server_com_microsofttranslator_api_SoapService</CachedSettingsPropName>
-    </WebReferenceUrl>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
