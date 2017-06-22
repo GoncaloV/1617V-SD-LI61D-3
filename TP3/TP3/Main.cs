@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using TP3.com.microsofttranslator.api;
+using IReceiver = Interfaces.IReceiver;
 using Interfaces;
 
 namespace TP3

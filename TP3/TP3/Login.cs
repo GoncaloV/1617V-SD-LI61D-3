@@ -57,9 +57,9 @@ namespace TP3
         private class Language
         {
             //What is showed in the comboBox - Eg: Portugues, English
-            public string FriendlyName { get; }
+            public string FriendlyName { get; set; }
             //What is used to connect to the translate service - Eg: pt, en
-            public string LanguageCode { get; }
+            public string LanguageCode { get; set; }
 
             public Language(string name, string code)
             {
