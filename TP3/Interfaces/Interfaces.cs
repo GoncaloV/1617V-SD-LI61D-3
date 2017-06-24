@@ -21,6 +21,7 @@ namespace Interfaces
     }
 
     public interface IUserCallback {
+
         [OperationContract]
         void NotifySubscribe(ChatUser info);
         [OperationContract]

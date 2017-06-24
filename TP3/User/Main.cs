@@ -66,12 +66,6 @@ namespace User {
 
         }
 
-
-
-
-
-
-
         protected override void OnFormClosing(FormClosingEventArgs e) {
 
             DialogResult res = DialogResult.No;

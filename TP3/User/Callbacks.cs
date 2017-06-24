@@ -1,12 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using Interfaces;
+using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
-using Interfaces;
+using User.RegisterService;
 
 namespace User{
 
     [CallbackBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, IncludeExceptionDetailInFaults = true)]
-    public class Callbacks : IUserCallback
+    public class Callbacks : IRegisterCallback
     {
 
         public List<ChatUser> userList { get; set; }
