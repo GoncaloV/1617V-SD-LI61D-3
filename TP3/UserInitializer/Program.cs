@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TP3;
+using User;
 
 namespace UserInitializer
 {
@@ -41,7 +41,7 @@ namespace UserInitializer
             //Black Magic.Same as TP1
             path = path.Substring(0, path.Length - 29);
 
-            path += "TP3\\TP3\\bin\\Debug";
+            path += "TP3\\User\\bin\\Debug";
 
             for (int i = 0; i < number*3; i = i+3)
             {
@@ -50,7 +50,7 @@ namespace UserInitializer
                 psi.UseShellExecute = true;
                 psi.LoadUserProfile = true;
                 psi.WorkingDirectory = path;
-                psi.FileName = "TP3.exe";
+                psi.FileName = "User.exe";
                 psi.Arguments = users[i] + " " + users[i+1] + " " + users[i+2];
                 Process.Start(psi);
             }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="29726a29-ec58-416a-b4d1-bf7aca03a03d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8676/RegisterService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RegisterService.xsd" MetadataType="Schema" ID="7edc5f19-5432-4118-b13d-fefb9b195639" SourceId="1" SourceUrl="http://localhost:8676/RegisterService?xsd=xsd2" />
+    <MetadataFile FileName="RegisterService.wsdl" MetadataType="Wsdl" ID="637f0499-e5db-484a-8598-27647c4c422b" SourceId="1" SourceUrl="http://localhost:8676/RegisterService?wsdl=wsdl0" />
+    <MetadataFile FileName="RegisterService1.wsdl" MetadataType="Wsdl" ID="dc11f26a-a1a8-401b-bd98-a08fdb20daaf" SourceId="1" SourceUrl="http://localhost:8676/RegisterService" />
+    <MetadataFile FileName="RegisterService1.xsd" MetadataType="Schema" ID="12f9a8c8-cd0b-40a8-aeb9-0664437172dc" SourceId="1" SourceUrl="http://localhost:8676/RegisterService?xsd=xsd0" />
+    <MetadataFile FileName="RegisterService2.xsd" MetadataType="Schema" ID="4683bd40-4d6e-4347-a619-762282932e64" SourceId="1" SourceUrl="http://localhost:8676/RegisterService?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

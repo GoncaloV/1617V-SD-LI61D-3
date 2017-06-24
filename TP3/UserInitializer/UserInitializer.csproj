@@ -50,8 +50,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TP3\User.csproj">
-      <Project>{326BD1B8-3128-4223-8649-D9EFFD30990C}</Project>
+    <ProjectReference Include="..\User\User.csproj">
+      <Project>{92FEA40A-B3DD-4BC2-9F55-9CD251F36B6E}</Project>
       <Name>User</Name>
     </ProjectReference>
   </ItemGroup>

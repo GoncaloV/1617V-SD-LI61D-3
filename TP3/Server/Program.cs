@@ -1,21 +1,15 @@
-﻿using Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.ServiceModel;
 using System.ServiceModel.Description;
-using System.Configuration;
+using Interfaces;
 
 namespace Server
 {
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single,
-                       ConcurrencyMode = ConcurrencyMode.Multiple, IncludeExceptionDetailInFaults = true)]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode = ConcurrencyMode.Multiple, IncludeExceptionDetailInFaults = true)]
     public class RegisterService : IRegister
     {
-
-
         private readonly IDictionary<ChatUser, IUserCallback> onlineUsers = new Dictionary<ChatUser, IUserCallback>();
 
         private readonly object myLock = new object();
