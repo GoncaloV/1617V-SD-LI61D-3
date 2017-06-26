@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="S51SKcohY9BKLQQidZbDMSudugk=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="elGO6mAcRADO+AJKaKoZUSVem+8=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IReceiver">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IReceiver" contract="ChatService.IReceiver" bindingType="basicHttpBinding" address="http://localhost:8765/ServiceChat" bindingConfiguration="BasicHttpBinding_IReceiver">
+    <endpoint name="BasicHttpBinding_IReceiver" contract="ReceiverService.IReceiver" bindingType="basicHttpBinding" address="http://localhost:8765/ServiceChat" bindingConfiguration="BasicHttpBinding_IReceiver">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:8765/ServiceChat</serializedValue>
@@ -127,7 +127,7 @@
           <serializedValue>BasicHttpBinding_IReceiver</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ChatService.IReceiver</serializedValue>
+          <serializedValue>ReceiverService.IReceiver</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

@@ -7,10 +7,11 @@ using System.ServiceModel.Configuration;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Interfaces;
-using User.ChatService;
+
 using User.TranslatorService;
 using IChatService = Interfaces.IReceiver;
 using User.RegisterService;
+using User.ReceiverService;
 
 namespace User {
 

@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace User.ChatService {
+namespace User.ReceiverService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://ISEL.ADEETC.SD", ConfigurationName="ChatService.IReceiver")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://ISEL.ADEETC.SD", ConfigurationName="ReceiverService.IReceiver")]
     public interface IReceiver {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ISEL.ADEETC.SD/IReceiver/ReceiveMessage", ReplyAction="http://ISEL.ADEETC.SD/IReceiver/ReceiveMessageResponse")]
@@ -23,12 +23,12 @@ namespace User.ChatService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IReceiverChannel : User.ChatService.IReceiver, System.ServiceModel.IClientChannel {
+    public interface IReceiverChannel : User.ReceiverService.IReceiver, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ReceiverClient : System.ServiceModel.ClientBase<User.ChatService.IReceiver>, User.ChatService.IReceiver {
+    public partial class ReceiverClient : System.ServiceModel.ClientBase<User.ReceiverService.IReceiver>, User.ReceiverService.IReceiver {
         
         public ReceiverClient() {
         }
