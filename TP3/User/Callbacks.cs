@@ -10,6 +10,7 @@ namespace User{
     public class Callbacks : IRegisterCallback
     {
 
+        //Handles all connected users in the multicast service
         public List<ChatUser> userList { get; set; }
         private readonly object nLock = new object();
 
@@ -23,7 +24,7 @@ namespace User{
         {
             lock (nLock)
             {
-                if (userList.Find((u) => u.Binding.Equals(user.Binding)) == null)
+                if (userList.Find((u) => u.URI.Equals(user.URI)) == null)
                     userList.Add(user);
             }
         }
@@ -32,7 +33,7 @@ namespace User{
         {
             lock (nLock)
             {
-                userList.RemoveAll(u => u.Binding.Equals(user.Binding));
+                userList.RemoveAll(u => u.URI.Equals(user.URI));
             }
         }
     }

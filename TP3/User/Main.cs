@@ -18,7 +18,10 @@ namespace User {
     public partial class Main : Form, IChatService {
 
         private static readonly string BINDING_NAME;
-        private ChatUser user = new ChatUser();
+
+        private double lastReceivedMessage = 0;
+
+        private LinkedList<ChatMessage> messageQueue = new LinkedList<ChatMessage>();
 
         //Microsoft Service
         private readonly string API_KEY = ConfigurationManager.AppSettings["Microsoft_Key"];
@@ -45,8 +48,6 @@ namespace User {
             }
         }
 
-
-
         public Main(string[] userConfig, bool selfInit)
         {
             InitializeComponent();
@@ -54,9 +55,6 @@ namespace User {
             callbacks = new Callbacks();
 
             server = new RegisterClient(new InstanceContext(callbacks));
-
-            //@TODO: Define the user URI in the app.config file.
-            user.URI = userConfig[userConfig.Length - 1];
 
             //Disable by default because we arent connected
             changeControllersState(false);
@@ -72,9 +70,7 @@ namespace User {
             Task t = Task.Factory.StartNew(() => {
                 try {
                     server.Unsubscribe(currentUser);
-                    res = MessageBox.Show(@"Chat Disconnect", @"Info",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
+                    res = DialogResult.OK;
                 }catch (Exception) {
                     MessageBox.Show(@"Server not responding try later", @"Info",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -106,20 +102,41 @@ namespace User {
             );
         }
 
-
         public void ReceiveMessage(ChatMessage msg) {
             string message = msg.message;
+
             try {
                 Task.Factory.StartNew(async () =>
-                {
-                    if (!currentUser.language.Equals(msg.language))
-                        message = await Translate(message, msg.language, currentUser.language);
+                {              
+                    if(server.isMessageValid(lastReceivedMessage, msg.timestamp)) {
+                        if (!currentUser.language.Equals(msg.language))
+                            message = await Translate(message, msg.language, currentUser.language);
 
-                    messageBox.Text += "New message from " + msg.username + ": " + message;
+
+                        logBox.Text += System.Environment.NewLine + "New message from " + msg.username + ": " + message;
+                        lastReceivedMessage = msg.timestamp;
+                    }
+                    else
+                    {
+                        foreach(ChatMessage msgs in messageQueue)
+                        {
+                            if (server.isMessageValid(lastReceivedMessage, msgs.timestamp))
+                            {
+                                if (!currentUser.language.Equals(msgs.language))
+                                    message = await Translate(message, msgs.language, currentUser.language);
+
+
+                                logBox.Text += System.Environment.NewLine + "New message from " + msgs.username + ": " + message;
+                                lastReceivedMessage = msgs.timestamp;
+                                messageQueue.Remove(msgs);
+                            }
+                        }
+
+                        messageQueue.AddLast(msg);
+                    }
                 });
             }catch (Exception) {
-                MessageBox.Show(@"Receiving message", @"ERROR",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine("Error on receiving message");
             }
         }
 
@@ -155,7 +172,7 @@ namespace User {
                 //Finally enable all actions
                 changeControllersState(true);
 
-                logBox.Text += "Connected as: " + username + ", language: " + nativeLanguage + "\n";
+                logBox.Text += "Connected as: " + username + ", language: " + nativeLanguage;
 
             }
             catch (Exception)
@@ -188,8 +205,10 @@ namespace User {
         }
 
         private void initService() {
+      
             host = new ServiceHost(this);
             host.Open();
+
         }
 
 
@@ -197,15 +216,19 @@ namespace User {
         {
             try
             {
+
+                int message = server.registerMessage();
+
                 Task.Factory.StartNew(() => {
                     foreach (ChatUser u in callbacks.userList)
                     {
-                        ReceiverClient rs = new ReceiverClient(currentUser.Binding, new EndpointAddress(currentUser.URI));
+                        ReceiverClient rs = new ReceiverClient(currentUser.Binding, new EndpointAddress(u.URI));
 
                         ChatMessage msg = new ChatMessage();
-                        msg.language = user.language;
-                        msg.username = user.name;
+                        msg.language = currentUser.language;
+                        msg.username = currentUser.name;
                         msg.message = messageBox.Text;
+                        msg.timestamp = message;
 
                         try
                         {
@@ -216,7 +239,9 @@ namespace User {
                             callbacks.NotifyUnsubscribe(u);
                         }
                     }
+                    messageBox.Text = "";
                 });
+
             }
             catch (Exception)
             {

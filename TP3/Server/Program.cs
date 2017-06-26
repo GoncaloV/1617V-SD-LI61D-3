@@ -12,7 +12,32 @@ namespace Server
     {
         private readonly IDictionary<ChatUser, IUserCallback> onlineUsers = new Dictionary<ChatUser, IUserCallback>();
 
+        private int messageNumber = 0;
         private readonly object myLock = new object();
+        private LinkedList<double> messagesSent = new LinkedList<double>();
+
+        private int IndexOf(double item)
+        {
+            var count = 0;
+            for (var node = messagesSent.First; node != null; node = node.Next, count++)
+            {
+                if (item.Equals(node.Value))
+                    return count;
+            }
+            return -1;
+        }
+
+        public bool isMessageValid(double lastValidTimestamp, double receivedTimestamp)
+        {
+            lock (myLock) { 
+                int pos = IndexOf(lastValidTimestamp);
+                int pos1 = IndexOf(receivedTimestamp);
+
+                return pos + 1 == pos1 || pos == pos1;
+            }
+        }
+
+
 
         public List<ChatUser> Subscribe(ChatUser user)
         {
@@ -45,17 +70,17 @@ namespace Server
                 }
                 catch (TimeoutException e)
                 {
-                    Console.WriteLine("## ERROR ## CentralService - Subscribe: " + e.Message);
+                    Console.WriteLine("## ERROR ##  IRegister - Subscribe: " + e.Message);
                     Console.WriteLine(e.StackTrace);
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("## ERROR ## CentralService - Subscribe: " + e.Message);
+                    Console.WriteLine("## ERROR ##  IRegister - Subscribe: " + e.Message);
                     Console.WriteLine(e.StackTrace);
                 }
 
                 alreadyGone.ForEach(i => onlineUsers.Remove(i));
-                Console.WriteLine("User: " + user.name + " subscribed");
+                Console.WriteLine("User: " + user.name + " subscribed, Binding: " + user.Binding + ", URI: " + user.URI);
                 return users;
             }
         }
@@ -97,12 +122,12 @@ namespace Server
                 }
                 catch (TimeoutException e)
                 {
-                    Console.WriteLine("## ERROR ## CentralService - Unsubscribe: " + e.Message);
+                    Console.WriteLine("## ERROR ##  IRegister - Unsubscribe: " + e.Message);
                     Console.WriteLine(e.StackTrace);
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("## ERROR ## CentralService - Unsubscribe: " + e.Message);
+                    Console.WriteLine("## ERROR ##  IRegister - Unsubscribe: " + e.Message);
                     Console.WriteLine(e.StackTrace);
                 }
             }
@@ -110,6 +135,19 @@ namespace Server
             Console.WriteLine("User: " + user.name + " unsubscribed");
         }
 
+
+
+        public int registerMessage()
+        {
+            lock (myLock)
+            {
+                int a = messageNumber++;
+                messagesSent.AddLast(a);
+                messageNumber = a;
+
+                return a;
+            }
+        }
     }
 
     class Program
@@ -131,7 +169,7 @@ namespace Server
                 host.AddServiceEndpoint(serviceType, bind, addr);
                 host.Open();
 
-                Console.WriteLine("CentralService hosted. To close hosting, Press Enter. ");
+                Console.WriteLine(" IRegister hosted. To close hosting, Press Enter. ");
                 Console.ReadLine();
                 host.Close();
                 Console.WriteLine("Host closed.");

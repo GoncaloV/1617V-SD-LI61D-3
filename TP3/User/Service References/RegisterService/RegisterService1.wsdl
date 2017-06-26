@@ -36,6 +36,24 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="isMessageValid">
+      <soap12:operation soapAction="http://ISEL.ADEETC.SD/IRegister/isMessageValid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerMessage">
+      <soap12:operation soapAction="http://ISEL.ADEETC.SD/IRegister/registerMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="NotifySubscribe">
       <soap12:operation soapAction="http://ISEL.ADEETC.SD/IRegister/NotifySubscribe" style="document" />
       <wsdl:input>

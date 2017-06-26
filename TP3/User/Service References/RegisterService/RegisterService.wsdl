@@ -19,6 +19,18 @@
   <wsdl:message name="IRegister_Unsubscribe_OutputMessage">
     <wsdl:part name="parameters" element="tns:UnsubscribeResponse" />
   </wsdl:message>
+  <wsdl:message name="IRegister_isMessageValid_InputMessage">
+    <wsdl:part name="parameters" element="tns:isMessageValid" />
+  </wsdl:message>
+  <wsdl:message name="IRegister_isMessageValid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isMessageValidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegister_registerMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:registerMessage" />
+  </wsdl:message>
+  <wsdl:message name="IRegister_registerMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registerMessageResponse" />
+  </wsdl:message>
   <wsdl:message name="IRegister_NotifySubscribe_OutputCallbackMessage">
     <wsdl:part name="parameters" element="tns:NotifySubscribe" />
   </wsdl:message>
@@ -39,6 +51,14 @@
     <wsdl:operation name="Unsubscribe">
       <wsdl:input wsaw:Action="http://ISEL.ADEETC.SD/IRegister/Unsubscribe" message="tns:IRegister_Unsubscribe_InputMessage" />
       <wsdl:output wsaw:Action="http://ISEL.ADEETC.SD/IRegister/UnsubscribeResponse" message="tns:IRegister_Unsubscribe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isMessageValid">
+      <wsdl:input wsaw:Action="http://ISEL.ADEETC.SD/IRegister/isMessageValid" message="tns:IRegister_isMessageValid_InputMessage" />
+      <wsdl:output wsaw:Action="http://ISEL.ADEETC.SD/IRegister/isMessageValidResponse" message="tns:IRegister_isMessageValid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registerMessage">
+      <wsdl:input wsaw:Action="http://ISEL.ADEETC.SD/IRegister/registerMessage" message="tns:IRegister_registerMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://ISEL.ADEETC.SD/IRegister/registerMessageResponse" message="tns:IRegister_registerMessage_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="NotifySubscribe">
       <wsdl:output wsaw:Action="http://ISEL.ADEETC.SD/IRegister/NotifySubscribe" message="tns:IRegister_NotifySubscribe_OutputCallbackMessage" />

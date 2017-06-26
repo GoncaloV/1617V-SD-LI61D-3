@@ -26,6 +26,18 @@ namespace User.RegisterService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ISEL.ADEETC.SD/IRegister/Unsubscribe", ReplyAction="http://ISEL.ADEETC.SD/IRegister/UnsubscribeResponse")]
         System.Threading.Tasks.Task UnsubscribeAsync(Interfaces.ChatUser info);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ISEL.ADEETC.SD/IRegister/isMessageValid", ReplyAction="http://ISEL.ADEETC.SD/IRegister/isMessageValidResponse")]
+        bool isMessageValid(double lastValidTimestamp, double receivedTimestamp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ISEL.ADEETC.SD/IRegister/isMessageValid", ReplyAction="http://ISEL.ADEETC.SD/IRegister/isMessageValidResponse")]
+        System.Threading.Tasks.Task<bool> isMessageValidAsync(double lastValidTimestamp, double receivedTimestamp);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ISEL.ADEETC.SD/IRegister/registerMessage", ReplyAction="http://ISEL.ADEETC.SD/IRegister/registerMessageResponse")]
+        int registerMessage();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ISEL.ADEETC.SD/IRegister/registerMessage", ReplyAction="http://ISEL.ADEETC.SD/IRegister/registerMessageResponse")]
+        System.Threading.Tasks.Task<int> registerMessageAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -80,6 +92,22 @@ namespace User.RegisterService {
         
         public System.Threading.Tasks.Task UnsubscribeAsync(Interfaces.ChatUser info) {
             return base.Channel.UnsubscribeAsync(info);
+        }
+        
+        public bool isMessageValid(double lastValidTimestamp, double receivedTimestamp) {
+            return base.Channel.isMessageValid(lastValidTimestamp, receivedTimestamp);
+        }
+        
+        public System.Threading.Tasks.Task<bool> isMessageValidAsync(double lastValidTimestamp, double receivedTimestamp) {
+            return base.Channel.isMessageValidAsync(lastValidTimestamp, receivedTimestamp);
+        }
+        
+        public int registerMessage() {
+            return base.Channel.registerMessage();
+        }
+        
+        public System.Threading.Tasks.Task<int> registerMessageAsync() {
+            return base.Channel.registerMessageAsync();
         }
     }
 }

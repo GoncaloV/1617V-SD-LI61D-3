@@ -27,6 +27,33 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="isMessageValid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lastValidTimestamp" type="xs:double" />
+        <xs:element minOccurs="0" name="receivedTimestamp" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isMessageValidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="isMessageValidResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registerMessage">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registerMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="registerMessageResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="NotifySubscribe">
     <xs:complexType>
       <xs:sequence>

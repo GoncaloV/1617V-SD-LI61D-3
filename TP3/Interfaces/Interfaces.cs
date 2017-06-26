@@ -18,6 +18,10 @@ namespace Interfaces
         List<ChatUser> Subscribe(ChatUser info);
         [OperationContract]
         void Unsubscribe(ChatUser info);
+        [OperationContract]
+        bool isMessageValid(double lastValidTimestamp, double receivedTimestamp);
+        [OperationContract]
+        int registerMessage();
     }
 
     public interface IUserCallback {
@@ -40,6 +44,7 @@ namespace Interfaces
         public string URI { get; set; }
         [DataMember]
         public string Binding { get; set; }
+
     }
 
     //Class that represents a message
@@ -57,5 +62,10 @@ namespace Interfaces
         //The user that sent it
         [DataMember]
         public string username { get; set; }
+
+        //The user that sent it
+        [DataMember]
+        public double timestamp { get; set; }
+
     }
 }
